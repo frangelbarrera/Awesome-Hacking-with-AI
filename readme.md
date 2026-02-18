@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/images/logo.png" alt="Awesome Hacking with AI Logo" width="500px">
+  <img src="assets/images/logo.png" alt="Awesome Hacking with AI Logo" width="700px">
 </p>
 
 ---
@@ -507,4 +507,5 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 <p align="center">
   <strong>⭐ Star this repository if you find it useful!</strong>
 </p>
+
 
