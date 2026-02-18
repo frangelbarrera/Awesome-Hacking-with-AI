@@ -20,10 +20,6 @@
 
 ## The Definitive Guide to AI-Powered Offensive Security
 
-<p align="center">
-  <img src="assets/images/ai_hacking_banner.jpg" alt="AI Hacking Banner" width="100%">
-</p>
-
 ---
 
 ## 📌 Table of Contents
@@ -507,5 +503,6 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 <p align="center">
   <strong>⭐ Star this repository if you find it useful!</strong>
 </p>
+
 
 
