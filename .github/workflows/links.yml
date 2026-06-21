@@ -1,0 +1,19 @@
+name: Link Checker
+
+on:
+  schedule:
+    - cron: '0 0 * * 0'  # Weekly on Sunday
+  workflow_dispatch:
+
+jobs:
+  link-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run lychee link checker
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --accept 200,429 --no-progress README.md
+          fail: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

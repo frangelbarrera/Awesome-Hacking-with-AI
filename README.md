@@ -7,10 +7,10 @@
 <div align="center">
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-blue.svg)](https://github.com/yourusername/Awesome-Hacking-with-AI/pulls)
+[![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-blue.svg)](https://github.com/frangelbarrera/Awesome-Hacking-with-AI/pulls)
 [![Awesome](https://awesome.re/badge.svg)](https://github.com/sindresorhus/awesome)
-[![Stars](https://img.shields.io/github/stars/yourusername/Awesome-Hacking-with-AI?style=social)](https://github.com/yourusername/Awesome-Hacking-with-AI/stargazers)
-[![Last Updated](https://img.shields.io/github/last-commit/yourusername/Awesome-Hacking-with-AI)](https://github.com/yourusername/Awesome-Hacking-with-AI/commits/main)
+[![Stars](https://img.shields.io/github/stars/frangelbarrera/Awesome-Hacking-with-AI?style=social)](https://github.com/frangelbarrera/Awesome-Hacking-with-AI/stargazers)
+[![Last Updated](https://img.shields.io/github/last-commit/frangelbarrera/Awesome-Hacking-with-AI)](https://github.com/frangelbarrera/Awesome-Hacking-with-AI/commits/main)
 
 </div>
 
@@ -18,14 +18,14 @@
 
 # Awesome-Hacking-with-AI
 
-## The Definitive Guide to AI-Powered Offensive Security
+## A Curated Guide to AI-Powered Offensive Security — Autonomous Pentesting, Red Team Operations, and Adversarial AI Research for Ethical Hackers and Security Professionals
 
 ---
 
 ## 📌 Table of Contents
 
 - [Introduction](#introduction)
-- [Quick Start: Your First AI-Powered Pentest](#quick-start-your-first-ai-powered-pentest)
+- [How to Use This Repository](#how-to-use-this-repository)
 - [Why AI in Hacking?](#why-ai-in-hacking)
 - [Learning Roadmap: Mastering AI Hacking](#learning-roadmap-mastering-ai-hacking)
 - [Core Concepts: AI Agent Architectures](#core-concepts-ai-agent-architectures)
@@ -68,54 +68,41 @@ This repository serves as the definitive **"Bible"** for AI-powered offensive se
 
 ---
 
-## 🚀 Quick Start: Your First AI-Powered Pentest
+## ⚖️ Ethical Use & Legal Compliance
 
-Get up and running with AI-powered penetration testing in 3 simple steps:
+**This repository contains detailed information about offensive security techniques powered by AI**, including autonomous exploitation, malware development, and social engineering. While this content is legitimate security research, it carries significant responsibility.
 
-### Step 1: Install Guardian-CLI
+### Researcher Code of Conduct
 
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/guardian-cli.git
-cd guardian-cli
+- ✅ **Scope Authorization Required**: You must have explicit, written authorization before applying any technique against a target
+- ✅ **Responsible Disclosure**: Report vulnerabilities to vendors through established channels before public disclosure
+- ✅ **Legal Compliance**: Adhere to all applicable laws, including the Computer Fraud and Abuse Act (CFAA, US), Computer Misuse Act (UK), and equivalent legislation in your jurisdiction
+- ✅ **No Harm**: Never use these techniques to cause damage, steal data, or disrupt services without authorization
+- ❌ **Unauthorized Access is Illegal**: Testing without permission is a criminal offense regardless of intent
 
-# Install dependencies
-pip install -r requirements.txt
+### Security Research Ethics
 
-# Configure your API key
-export OPENAI_API_KEY="sk-your-key-here"
-```
+The tools and techniques documented here are dual-use. We publish them because understanding offensive capabilities is essential for building effective defenses. Security professionals must study attacker methodologies to protect against them.
 
-### Step 2: Create Your Configuration
+> 📖 **See also**: [Responsible Disclosure Policies](https://cheatsheetseries.owasp.org/cheatsheets/Vulnerability_Disclosure_Cheat_Sheet.html) | [CERT Guide to Coordinated Vulnerability Disclosure](https://resources.sei.cmu.edu/asset_files/SpecialReport/2017_003_001_503340.pdf)
 
-Create a `guardian.yaml` file:
+---
 
-```yaml
-ai:
-  provider: openai
-  openai:
-    model: gpt-4o
-    api_key: sk-your-key-here
-tools:
-  nmap:
-    enabled: true
-    args: "-sV -p-"
-  nuclei:
-    enabled: true
-    templates: "cves,vulnerabilities"
-```
+## How to Use This Repository
 
-### Step 3: Run Your First Scan
+This repository is a curated collection of AI-powered offensive security resources, not an installable tool. Here's how to navigate it:
 
-```bash
-# Execute autonomous pentest
-guardian scan --target example.com --workflow autonomous
+| Section | What You'll Find |
+|:--------|:-----------------|
+| **Learning Roadmap** | Structured path from AI fundamentals to advanced offensive operations |
+| **Core Concepts** | AI agent architectures, the ReAct pattern, and how they apply to security |
+| **Categories of Tools** | Curated list of autonomous AI agents and CLI tools for pentesting |
+| **Prompt Library** | Ready-to-use prompts for payload generation, vulnerability discovery, and OSINT |
+| **Featured Tools & Case Studies** | Deep dives into PentAGI, xOffense, Penligent, Shannon, and more |
+| **Advanced Tactics** | AI-driven phishing, malware development, botnets, and network exploitation |
+| **Prompt Engineering** | Best practices for crafting effective security prompts |
 
-# Or use interactive mode
-guardian scan --target example.com --workflow interactive
-```
-
-> **Pro-Tip**: Start with `--workflow interactive` to understand how the AI agent thinks before switching to autonomous mode for production assessments.
+> ⚠️ **Before using any tool or technique listed here:** Ensure you have explicit, written authorization for your target. All content is intended for ethical security research and authorized penetration testing only.
 
 ---
 
@@ -190,7 +177,7 @@ Sophisticated AI systems capable of executing complex hacking workflows with min
 
 | Tool | Description | Key Features | Link |
 |:-----|:------------|:------------|:-----|
-| **PentAGI** | Fully autonomous pentesting AI agent with 20+ integrated tools | Docker sandbox, smart memory, knowledge graph, detailed reporting | [GitHub](https://github.com/pentagi/pentagi) |
+| **PentAGI** | Fully autonomous pentesting AI agent with 20+ integrated tools | Docker sandbox, smart memory, knowledge graph, detailed reporting | [GitHub](https://github.com/mrigankad/pentagi) |
 | **xOffense** | Multi-agent penetration testing framework with offensive knowledge-enhanced LLMs | Specialized agents for recon, scanning, exploitation, orchestration layer | [arXiv](https://arxiv.org/abs/2509.13021) |
 | **Penligent** | World's first agentic AI hacker - simplifies complex security assessments | Natural language prompts, autonomous red teaming | [Website](https://penligent.ai/) |
 | **Shannon** | Autonomous AI hacker delivering actual exploits for web applications | Payload generation, attack surface analysis, custom exploits | [GitHub](https://github.com/KeygraphHQ/shannon) |
@@ -203,26 +190,8 @@ Intelligent automation directly in your terminal:
 
 | Tool | Description | Usage |
 |:-----|:------------|:------|
-| **Guardian-CLI** | Production-ready AI pentesting automation using Gemini + LangChain | `guardian scan --target example.com --workflow autonomous` |
 | **Zen-AI-Pentest** | Open-source framework using autonomous agents + security utilities | Automated scanning and exploitation |
 | **PentestGPT** | ChatGPT-powered interactive guidance for pentesting tasks | Interactive assistance |
-
-#### Guardian-CLI Configuration Example
-
-```yaml
-ai:
-  provider: openai
-  openai:
-    model: gpt-4o
-    api_key: sk-your-key-here
-tools:
-  nmap:
-    enabled: true
-    args: "-sV -p-"
-  nuclei:
-    enabled: true
-    templates: "cves,vulnerabilities"
-```
 
 ---
 
@@ -289,7 +258,7 @@ This table highlights some of the cutting-edge AI-powered tools and frameworks r
 | Tool | Category | Description | Link |
 | :--- | :--- | :--- | :--- |
 | **HexStrike AI** | AI Agent Framework | A multi-agent system based on MCP that integrates LLMs with over 150 cybersecurity tools for autonomous offensive operations. | [GitHub](https://github.com/0x4m4/hexstrike-ai) |
-| **PentAGI** | Autonomous Pentesting | A fully autonomous pentesting AI agent with 20+ integrated tools, capable of executing complex attack workflows. | [GitHub](https://github.com/pentagi/pentagi) |
+| **PentAGI** | Autonomous Pentesting | A fully autonomous pentesting AI agent with 20+ integrated tools, capable of executing complex attack workflows. | [GitHub](https://github.com/mrigankad/pentagi) |
 | **Shannon** | Web Exploitation AI | An autonomous AI hacker designed to find and deliver actual exploits for web applications, not just alerts. | [GitHub](https://github.com/KeygraphHQ/shannon) |
 | **Nebula** | Pentesting Assistant | An AI-powered penetration testing assistant that integrates advanced open-source tools for cybersecurity professionals. | [GitHub](https://github.com/berylliumsec/nebula) |
 | **Buttercup** | Vulnerability Management | A free, automated, AI-powered platform by Trail of Bits that finds and fixes vulnerabilities in open-source software. | [Help Net Security](https://www.helpnetsecurity.com/2025/08/27/hottest-cybersecurity-open-source-tools-of-the-month-august-2025/) |
@@ -538,14 +507,40 @@ Master the art of crafting prompts that yield precise, actionable results:
 
 ## Ethical Considerations & Responsible Disclosure
 
-⚠️ **IMPORTANT**: This repository is strictly intended for:
+### ⚠️ Critical Reminder
+
+This repository documents advanced offensive techniques. **Misuse carries severe legal consequences**, including criminal prosecution under computer fraud statutes worldwide.
+
+**This repository is strictly intended for:**
 - ✅ Ethical hacking
 - ✅ Authorized penetration testing
 - ✅ Academic security research
+- ✅ Defensive security training
+- ✅ Red team operations with explicit scope authorization
 
-**Any misuse for illegal activities is unequivocally condemned.**
+**Explicitly prohibited:**
+- ❌ Unauthorized access to any system
+- ❌ Malicious use of techniques described here
+- ❌ Testing without written authorization
+- ❌ Data theft, destruction, or disruption
 
-Users must have **explicit, written authorization** before conducting security assessments. Adherence to local, national, and international laws is paramount.
+### Legal Frameworks to Know
+
+| Jurisdiction | Key Legislation | Scope |
+|:-------------|:----------------|:------|
+| **United States** | Computer Fraud and Abuse Act (CFAA), 18 U.S.C. § 1030 | Unauthorized access, exceeding authorized access |
+| **United Kingdom** | Computer Misuse Act 1990 | Unauthorized access, modification, impairment |
+| **European Union** | Directive 2013/40/EU | Attacks against information systems |
+| **International** | Budapest Convention on Cybercrime | Cross-border cybercrime cooperation |
+
+### Responsible Disclosure Best Practices
+
+1. **Document everything**: Maintain detailed logs of testing activities and findings
+2. **Notify vendors first**: Allow reasonable time for remediation before public disclosure (typically 90 days)
+3. **Follow coordinated disclosure**: Use platforms like [HackerOne](https://www.hackerone.com/policies/disclosure) or [CERT/CC](https://www.sei.cmu.edu/about/divisions/cert/index.cfm)
+4. **Protect data**: Never retain or share sensitive data discovered during testing
+
+> **Bottom line**: If you're not sure whether you're authorized — you're not. Get written permission first.
 
 ---
 
