@@ -181,6 +181,8 @@ Sophisticated AI systems capable of executing complex hacking workflows with min
 | **xOffense** | Multi-agent penetration testing framework with offensive knowledge-enhanced LLMs | Specialized agents for recon, scanning, exploitation, orchestration layer | [arXiv](https://arxiv.org/abs/2509.13021) |
 | **Penligent** | World's first agentic AI hacker - simplifies complex security assessments | Natural language prompts, autonomous red teaming | [Website](https://penligent.ai/) |
 | **Shannon** | Autonomous AI hacker delivering actual exploits for web applications | Payload generation, attack surface analysis, custom exploits | [GitHub](https://github.com/KeygraphHQ/shannon) |
+| **HALO (GEMMA-by-GOOGLE)** | Fully local, autonomous AI pentesting agent powered by a local Gemma model and a Flask MCP server | Autonomous recon→attack→report loop, 29-tool MCP arsenal, persistent negative-experience cache, 100% local (no API keys) | [GitHub](https://github.com/XenoCoreGiger31/GEMMA-by-GOOGLE) |
+
 
 ---
 
