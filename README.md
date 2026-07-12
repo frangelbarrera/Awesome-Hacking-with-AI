@@ -180,7 +180,7 @@ Sophisticated AI systems capable of executing complex hacking workflows with min
 | **PentAGI** | Fully autonomous pentesting AI agent with 20+ integrated tools | Docker sandbox, smart memory, knowledge graph, detailed reporting | [GitHub](https://github.com/mrigankad/pentagi) |
 | **xOffense** | Multi-agent penetration testing framework with offensive knowledge-enhanced LLMs | Specialized agents for recon, scanning, exploitation, orchestration layer | [arXiv](https://arxiv.org/abs/2509.13021) |
 | **Penligent** | World's first agentic AI hacker - simplifies complex security assessments | Natural language prompts, autonomous red teaming | [Website](https://penligent.ai/) |
-| **Darkmoon** | Open source autonomous AI pentesting platform that orchestrates 80+ offensive tools via Markdown playbooks and MCP | Web, cloud, Active Directory, Kubernetes and API coverage, evidence trail per finding, model agnostic | [GitHub](https://github.com/ASCIT31/Dark-Moon) |
+| **Darkmoon** | Open-source autonomous AI pentesting platform orchestrating 80+ offensive tools via MCP | Web, cloud, AD, K8s coverage; evidence trail per finding; Privacy Gateway masks sensitive data from model | [GitHub](https://github.com/ASCIT31/Dark-Moon) |
 | **Shannon** | Autonomous AI hacker delivering actual exploits for web applications | Payload generation, attack surface analysis, custom exploits | [GitHub](https://github.com/KeygraphHQ/shannon) |
 
 ---
