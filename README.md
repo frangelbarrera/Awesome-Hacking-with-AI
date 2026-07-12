@@ -182,6 +182,8 @@ Sophisticated AI systems capable of executing complex hacking workflows with min
 | **Penligent** | World's first agentic AI hacker - simplifies complex security assessments | Natural language prompts, autonomous red teaming | [Website](https://penligent.ai/) |
 | **Darkmoon** | Open-source autonomous AI pentesting platform orchestrating 80+ offensive tools via MCP | Web, cloud, AD, K8s coverage; evidence trail per finding; Privacy Gateway masks sensitive data from model | [GitHub](https://github.com/ASCIT31/Dark-Moon) |
 | **Shannon** | Autonomous AI hacker delivering actual exploits for web applications | Payload generation, attack surface analysis, custom exploits | [GitHub](https://github.com/KeygraphHQ/shannon) |
+| **HALO** | Fully local, autonomous AI pentesting agent powered by a local Gemma 4-12B model and a Flask MCP server | Autonomous recon→attack→report loop, 29-tool MCP toolkit, persistent negative-experience cache, no API keys required | [GitHub](https://github.com/XenoCoreGiger31/GEMMA-by-GOOGLE) |
+
 
 ---
 
