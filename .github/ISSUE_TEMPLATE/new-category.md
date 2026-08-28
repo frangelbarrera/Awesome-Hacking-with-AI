@@ -1,19 +1,25 @@
 ---
-name: Suggest new category
-about: Propose a new section or category for the list
-title: 'New category: '
-labels: enhancement
-assignees: ''
+name: Propose a category
+about: Suggest a durable section that improves navigation and curation
+labels: curation, triage
 ---
 
-**Category Name**: 
+## Proposed category
 
-**Description** (what belongs here):
+**Name:**
 
-**Suggested tools for this category** (at least 3):
+**Scope:** Explain what belongs in this category and what does not.
 
-1. 
-2. 
-3. 
+**Reader need:** Explain which reader question or navigation problem it solves.
 
-**Why is this category needed?**
+## Why existing categories are insufficient
+
+Describe the nearest existing categories and why this is not merely a duplicate or a single-product grouping.
+
+## Candidate resources
+
+Provide at least three canonical resources. For each, include type, URL, maintainer or publisher, and a concise reason it belongs. If a candidate is a tool, agent, model, dataset, lab, or MCP server, include its relevant safety and permission context.
+
+## Long-term maintenance
+
+Explain whether the category is likely to remain useful beyond a short-lived trend and how entries could be reviewed consistently.
