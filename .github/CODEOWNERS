@@ -1,0 +1,6 @@
+# Maintainer review is expected for high-impact documentation and repository policy changes.
+/README.md @frangelbarrera
+/CONTRIBUTING.md @frangelbarrera
+/SECURITY.md @frangelbarrera
+/docs/ @frangelbarrera
+/.github/ @frangelbarrera
