@@ -8,582 +8,327 @@
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-blue.svg)](https://github.com/frangelbarrera/Awesome-Hacking-with-AI/pulls)
-[![Awesome](https://awesome.re/badge.svg)](https://github.com/sindresorhus/awesome)
-[![Stars](https://img.shields.io/github/stars/frangelbarrera/Awesome-Hacking-with-AI?style=social)](https://github.com/frangelbarrera/Awesome-Hacking-with-AI/stargazers)
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re/)
+[![Stars](https://img.shields.io/github/stars/frangelbarrera/Awesome-Hacking-with-AI?style=social)](https://github.com/frangelbarrera/Awesome-Hacking-with-AI)
 [![Last Updated](https://img.shields.io/github/last-commit/frangelbarrera/Awesome-Hacking-with-AI)](https://github.com/frangelbarrera/Awesome-Hacking-with-AI/commits/main)
 
 </div>
 
 ---
 
-# Awesome-Hacking-with-AI
-
-## A Curated Guide to AI-Powered Offensive Security — Autonomous Pentesting, Red Team Operations, and Adversarial AI Research for Ethical Hackers and Security Professionals
-
----
-
-## 📌 Table of Contents
-
-- [Introduction](#introduction)
-- [How to Use This Repository](#how-to-use-this-repository)
-- [Why AI in Hacking?](#why-ai-in-hacking)
-- [Learning Roadmap: Mastering AI Hacking](#learning-roadmap-mastering-ai-hacking)
-- [Core Concepts: AI Agent Architectures](#core-concepts-ai-agent-architectures)
-  - [The ReAct Pattern: Reasoning and Acting](#the-react-pattern-reasoning-and-acting)
-- [Categories of AI Hacking Tools](#categories-of-ai-hacking-tools)
-  - [Autonomous AI Agents](#autonomous-ai-agents)
-  - [AI-Powered CLI \& Console Tools](#ai-powered-cli--console-tools)
-- [Prompt Library](#prompt-library)
-  - [Payload Generation](#-payload-generation)
-  - [Code Analysis \& Vulnerability Identification](#-code-analysis--vulnerability-identification)
-  - [OSINT Target Profiling](#-osint-target-profiling)
-  - [Exploit Generation](#-exploit-generation)
-  - [Multi-Turn Vulnerability Discovery](#-multi-turn-vulnerability-discovery)
-- [Featured Tools \& Case Studies](#featured-tools--case-studies)
-  - [PentAGI: Penetration Testing Artificial General Intelligence](#pentagi-penetration-testing-artificial-general-intelligence)
-  - [xOffense: Multi-Agent Offensive Framework](#xoffense-multi-agent-offensive-framework)
-  - [Penligent: Agentic AI Hacker](#penligent-agentic-ai-hacker)
-  - [Shannon: Autonomous Web Application Exploitation](#shannon-autonomous-web-application-exploitation)
-- [Advanced AI-Powered Offensive Tactics](#advanced-ai-powered-offensive-tactics)
-  - [AI in Social Engineering and Personalized Phishing](#ai-in-social-engineering-and-personalized-phishing)
-  - [AI-Powered Malware Development](#ai-powered-malware-development)
-  - [AI-Driven Botnets and C2](#ai-driven-botnets-and-c2)
-  - [AI in Network Analysis and Exploitation](#ai-in-network-analysis-and-exploitation)
-  - [Featured AI Hacking Tools](#featured-ai-hacking-tools)
-- [Advanced Prompt Engineering](#advanced-prompt-engineering)
-- [Ethical Considerations \& Responsible Disclosure](#ethical-considerations--responsible-disclosure)
-- [Contributing](#contributing)
-- [License](#license)
-- [References](#references)
-
----
-
-## Introduction
-
-The convergence of Artificial Intelligence (AI) and cybersecurity has ushered in a new era for offensive security. AI is no longer merely a defensive asset; it is rapidly becoming a formidable force in penetration testing, vulnerability discovery, and red teaming operations.
-
-This repository serves as the definitive **"Bible"** for AI-powered offensive security, providing a comprehensive guide for security professionals, researchers, and enthusiasts. We delve into the technical underpinnings, operational workflows, and practical applications of AI in offensive contexts, emphasizing **ethical usage and responsible disclosure**.
-
-> ⚠️ **Disclaimer**: All tools and techniques presented in this repository are intended for **ethical hacking, authorized penetration testing, and academic security research only**. Unauthorized access to computer systems is illegal and strictly prohibited.
-
----
-
-## ⚖️ Ethical Use & Legal Compliance
-
-**This repository contains detailed information about offensive security techniques powered by AI**, including autonomous exploitation, malware development, and social engineering. While this content is legitimate security research, it carries significant responsibility.
-
-### Researcher Code of Conduct
-
-- ✅ **Scope Authorization Required**: You must have explicit, written authorization before applying any technique against a target
-- ✅ **Responsible Disclosure**: Report vulnerabilities to vendors through established channels before public disclosure
-- ✅ **Legal Compliance**: Adhere to all applicable laws, including the Computer Fraud and Abuse Act (CFAA, US), Computer Misuse Act (UK), and equivalent legislation in your jurisdiction
-- ✅ **No Harm**: Never use these techniques to cause damage, steal data, or disrupt services without authorization
-- ❌ **Unauthorized Access is Illegal**: Testing without permission is a criminal offense regardless of intent
-
-### Security Research Ethics
-
-The tools and techniques documented here are dual-use. We publish them because understanding offensive capabilities is essential for building effective defenses. Security professionals must study attacker methodologies to protect against them.
-
-> 📖 **See also**: [Responsible Disclosure Policies](https://cheatsheetseries.owasp.org/cheatsheets/Vulnerability_Disclosure_Cheat_Sheet.html) | [CERT Guide to Coordinated Vulnerability Disclosure](https://resources.sei.cmu.edu/asset_files/SpecialReport/2017_003_001_503340.pdf)
-
----
-
-## How to Use This Repository
-
-This repository is a curated collection of AI-powered offensive security resources, not an installable tool. Here's how to navigate it:
-
-| Section | What You'll Find |
-|:--------|:-----------------|
-| **Learning Roadmap** | Structured path from AI fundamentals to advanced offensive operations |
-| **Core Concepts** | AI agent architectures, the ReAct pattern, and how they apply to security |
-| **Categories of Tools** | Curated list of autonomous AI agents and CLI tools for pentesting |
-| **Prompt Library** | Ready-to-use prompts for payload generation, vulnerability discovery, and OSINT |
-| **Featured Tools & Case Studies** | Deep dives into PentAGI, xOffense, Penligent, Shannon, and more |
-| **Advanced Tactics** | AI-driven phishing, malware development, botnets, and network exploitation |
-| **Prompt Engineering** | Best practices for crafting effective security prompts |
-
-> ⚠️ **Before using any tool or technique listed here:** Ensure you have explicit, written authorization for your target. All content is intended for ethical security research and authorized penetration testing only.
-
----
-
-## Why AI in Hacking?
-
-AI's integration into offensive security paradigms offers transformative advantages:
-
-| Advantage | Description |
-|:---------|:------------|
-| **Hyper-Automation** | AI agents automate entire attack chains, from reconnaissance to exploitation |
-| **Speed & Efficiency** | ML algorithms process vast datasets to identify subtle attack vectors |
-| **Adaptive Strategies** | AI learns from interactions to bypass defenses and exploit zero-days |
-| **Scalability** | Parallel execution across numerous targets and environments |
-| **Sophisticated Decision-Making** | Advanced models reason through complex scenarios |
-
----
-
-## Learning Roadmap: Mastering AI Hacking
-
-A structured path to become proficient in AI-powered offensive security:
-
-| Phase | Focus Area | Key Topics |
-|:------|:-----------|:-----------|
-| **1** | **Foundations** | Transformer architectures, LLM fundamentals, Attention mechanisms, Vector databases |
-| **2** | **AI Security** | OWASP LLM Top 10, Prompt Injection, Jailbreaking, Training Data Poisoning |
-| **3** | **Offensive AI** | ReAct pattern, LangChain/LangGraph for security, Autonomous OSINT agents |
-| **4** | **Advanced Ops** | Evasive payload generation, AI-driven C2 infrastructures, Automated exploit development |
-| **5** | **Defense** | ML-based anomaly detection, AI-assisted log analysis, Automated incident response |
-
----
-
-## Core Concepts: AI Agent Architectures
-
-### The ReAct Pattern: Reasoning and Acting
-
-The **ReAct (Reasoning + Acting)** pattern is a prominent architectural design for AI agents in offensive security. It allows AI agents to interleave reasoning with acting in an iterative loop.
-
-```mermaid
-graph TD
-    A[User Query] --> B[Thought: Analyze Task]
-    B --> C{Reasoning Step}
-    C -->|Plan Action| D[Action: Execute Tool]
-    D --> E[Observation: Get Result]
-    E --> C
-    C -->|Complete| F[Final Answer]
-    
-    style A fill:#1a1a2e,stroke:#e94560,color:#fff
-    style B fill:#16213e,stroke:#0f3460,color:#fff
-    style C fill:#16213e,stroke:#0f3460,color:#fff
-    style D fill:#0f3460,stroke:#e94560,color:#fff
-    style E fill:#0f3460,stroke:#e94560,color:#fff
-    style F fill:#e94560,stroke:#fff,color:#fff
-```
-
-**Key Components:**
-
-| Component | Description |
-|:----------|:------------|
-| **Thought** | Internal monologue - reasons about current state, identifies goals, plans actions |
-| **Action** | Tool/command execution based on reasoning |
-| **Observation** | Output/result from action execution |
-
-The loop (`Thought → Action → Observation`) continues until the objective is achieved.
-
----
-
-## Categories of AI Hacking Tools
-
-### Autonomous AI Agents
-
-Sophisticated AI systems capable of executing complex hacking workflows with minimal human intervention.
-
-| Tool | Description | Key Features | Link |
-|:-----|:------------|:------------|:-----|
-| **PentAGI** | Fully autonomous pentesting AI agent with 20+ integrated tools | Docker sandbox, smart memory, knowledge graph, detailed reporting | [GitHub](https://github.com/mrigankad/pentagi) |
-| **xOffense** | Multi-agent penetration testing framework with offensive knowledge-enhanced LLMs | Specialized agents for recon, scanning, exploitation, orchestration layer | [arXiv](https://arxiv.org/abs/2509.13021) |
-| **Penligent** | World's first agentic AI hacker - simplifies complex security assessments | Natural language prompts, autonomous red teaming | [Website](https://penligent.ai/) |
-| **Darkmoon** | Open-source autonomous AI pentesting platform orchestrating 80+ offensive tools via MCP | Web, cloud, AD, K8s coverage; evidence trail per finding; Privacy Gateway masks sensitive data from model | [GitHub](https://github.com/ASCIT31/Dark-Moon) |
-| **Shannon** | Autonomous AI hacker delivering actual exploits for web applications | Payload generation, attack surface analysis, custom exploits | [GitHub](https://github.com/KeygraphHQ/shannon) |
-| **HALO** | Fully local, autonomous AI pentesting agent powered by a local Gemma 4-12B model and a Flask MCP server | Autonomous recon→attack→report loop, 29-tool MCP toolkit, persistent negative-experience cache, no API keys required | [GitHub](https://github.com/XenoCoreGiger31/GEMMA-by-GOOGLE) |
-
-
----
-
-### AI-Powered CLI & Console Tools
-
-Intelligent automation directly in your terminal:
-
-| Tool | Description | Usage |
-|:-----|:------------|:------|
-| **Zen-AI-Pentest** | Open-source framework using autonomous agents + security utilities | Automated scanning and exploitation |
-| **PentestGPT** | ChatGPT-powered interactive guidance for pentesting tasks | Interactive assistance |
-
----
-
-## Advanced AI-Powered Offensive Tactics
-
-The integration of Artificial Intelligence into offensive security has ushered in a new era of sophisticated and highly effective attack vectors. This section delves into advanced tactics where AI plays a pivotal role, from crafting hyper-personalized phishing campaigns to developing self-mutating malware and orchestrating resilient botnets. Understanding these techniques is crucial for both offensive practitioners and defenders aiming to build robust security postures.
-
-### AI in Social Engineering and Personalized Phishing
-
-AI is revolutionizing social engineering and phishing by enabling attackers to craft highly convincing and personalized campaigns at scale. Generative AI models can produce human-like text, voice, and even video, making it increasingly difficult for targets to distinguish legitimate communications from malicious ones [1].
-
-#### Target Reconnaissance (OSINT with AI Agents)
-
-AI agents are increasingly used for Open-Source Intelligence (OSINT) gathering, automating the collection and analysis of vast amounts of public data to build detailed target profiles. These agents can scrape social media platforms (e.g., LinkedIn, Twitter), public records, and news articles to identify psychological vulnerabilities, organizational structures, and potential entry points for attacks [2]. By understanding a target's interests, connections, and communication style, AI can generate highly effective spear-phishing content.
-
-#### Phishing Content Generation with Large Language Models (LLMs)
-
-Large Language Models (LLMs) are powerful tools for generating persuasive phishing emails, SMS messages (smishing), and vishing scripts. They can mimic specific writing styles, incorporate personalized details, and adapt their language to bypass traditional spam filters and security awareness training [3]. This capability significantly lowers the barrier to entry for attackers and increases the success rate of social engineering campaigns.
-
-#### Deepfakes and Voice Cloning for Identity Impersonation
-
-Advanced AI techniques, such as deepfakes and voice cloning, enable attackers to create synthetic media that convincingly impersonates individuals. This is particularly effective in vishing (voice phishing) and Business Email Compromise (BEC) scams, where a cloned voice or deepfake video of a CEO or executive can trick employees into transferring funds or divulging sensitive information [4]. The realism of these synthetic identities makes detection extremely challenging.
-
-### AI-Powered Malware Development
-
-AI is transforming malware development, leading to more evasive, adaptive, and resilient malicious software. Attackers leverage AI to create malware that can dynamically alter its code, evade detection mechanisms, and intelligently adapt to its environment.
-
-#### Polymorphic Malware and Evasion Techniques
-
-Polymorphic malware, enhanced by AI, can constantly rewrite and mutate its code and behavior during runtime, making it incredibly difficult for traditional signature-based antivirus (AV) and Endpoint Detection and Response (EDR) systems to detect [5]. Local LLMs can be embedded within malware to generate new code variants on the fly, ensuring that each instance of the malware presents a unique signature. Furthermore, AI can analyze the execution environment to detect sandboxes or virtual machines, allowing the malware to remain dormant or alter its behavior to evade analysis [6].
-
-#### Dynamic Payload Generation and Exploitation
-
-AI can generate highly customized and dynamic payloads tailored to specific target architectures and vulnerabilities in real-time. This includes adapting shellcode, crafting exploit chains, and optimizing attack vectors based on reconnaissance data. This capability significantly increases the success rate of exploitation by ensuring payloads are precise and effective against the identified weaknesses [7].
-
-### AI-Driven Botnets and C2
-
-AI is enhancing botnet capabilities, making them more resilient, scalable, and difficult to dismantle. From rapid propagation to intelligent command and control, AI is pushing the boundaries of what botnets can achieve.
-
-#### Autonomous Botnets and Large-Scale Attacks
-
-Modern botnets, such as the AISURU/TurboMirai class, leverage AI for rapid propagation, efficient management of compromised devices, and the orchestration of massive Distributed Denial of Service (DDoS) attacks [8]. These IoT-based botnets have demonstrated the capacity to launch attacks exceeding 20 Tbps, overwhelming even robust defenses [9]. AI enables these botnets to make autonomous decisions regarding target selection and attack methodologies, reducing reliance on centralized command.
-
-#### Intelligent Command and Control (C2) Infrastructures
-
-AI is being used to create more stealthy and resilient Command and Control (C2) channels. The concept of "AI-in-the-Middle" involves using legitimate AI services (e.g., cloud-based LLMs, AI APIs) as proxies for C2 traffic [10]. This technique makes it extremely challenging for defenders to detect and block malicious communications, as the traffic appears to originate from trusted AI services. AI can also optimize C2 communication patterns to blend in with normal network traffic, further enhancing stealth.
-
-### AI in Network Analysis and Exploitation
-
-AI is transforming network analysis and vulnerability exploitation, leading to more automated, efficient, and comprehensive penetration testing capabilities. This involves integrating AI with traditional hacking tools and frameworks.
-
-#### AI Agent Frameworks for Penetration Testing (MCP)
-
-Frameworks like **HexStrike AI** [11], **PentAGI** [12], and **Shannon** [13] utilize the Model Context Protocol (MCP) to bridge Large Language Models (LLMs) with existing security tools (e.g., Nmap, Metasploit, Nuclei). These multi-agent systems enable autonomous penetration testing, covering reconnaissance, vulnerability scanning, exploitation, and post-exploitation phases with minimal human intervention. They can reason through complex scenarios, plan actions, and execute tools to achieve specific objectives.
-
-#### AI-Driven Vulnerability Discovery (Zero-Days)
-
-AI is increasingly applied to static and dynamic code analysis, as well as binary analysis, to identify complex vulnerabilities, including logic flaws and zero-day exploits, that often elude traditional security tools [14]. Machine learning models can learn from vast datasets of known vulnerabilities and code patterns to predict and pinpoint new weaknesses, significantly accelerating the discovery of critical flaws before they are widely known.
-
-### Featured AI Hacking Tools and Frameworks
-
-This table highlights some of the cutting-edge AI-powered tools and frameworks relevant to offensive security, many of which leverage AI agents and advanced machine learning techniques.
-
-| Tool | Category | Description | Link |
-| :--- | :--- | :--- | :--- |
-| **HexStrike AI** | AI Agent Framework | A multi-agent system based on MCP that integrates LLMs with over 150 cybersecurity tools for autonomous offensive operations. | [GitHub](https://github.com/0x4m4/hexstrike-ai) |
-| **PentAGI** | Autonomous Pentesting | A fully autonomous pentesting AI agent with 20+ integrated tools, capable of executing complex attack workflows. | [GitHub](https://github.com/mrigankad/pentagi) |
-| **Shannon** | Web Exploitation AI | An autonomous AI hacker designed to find and deliver actual exploits for web applications, not just alerts. | [GitHub](https://github.com/KeygraphHQ/shannon) |
-| **Nebula** | Pentesting Assistant | An AI-powered penetration testing assistant that integrates advanced open-source tools for cybersecurity professionals. | [GitHub](https://github.com/berylliumsec/nebula) |
-| **Buttercup** | Vulnerability Management | A free, automated, AI-powered platform by Trail of Bits that finds and fixes vulnerabilities in open-source software. | [Help Net Security](https://www.helpnetsecurity.com/2025/08/27/hottest-cybersecurity-open-source-tools-of-the-month-august-2025/) |
-| **MCP (Model Context Protocol)** | Protocol Standard | An emerging standard enabling AI agents to interact seamlessly with various hacking and cybersecurity tools. | [Checkpoint Blog](https://blog.checkpoint.com/executive-insights/hexstrike-ai-when-llms-meet-zero-day-exploitation/) |
-| **AISURU / TurboMirai** | Botnet (Research) | A class of IoT botnets leveraging AI for rapid propagation and orchestrating massive DDoS attacks (e.g., +20 Tbps). | [NETSCOUT Blog](https://www.netscout.com/blog/asert/asert-threat-summary-aisuru-and-related-turbomirai-botnet-ddos) |
-
----
-
-## Prompt Library
-
-Advanced prompts for offensive security operations:
-
-### 🔴 Payload Generation
-
-```markdown
-"""
-You are an expert penetration tester. Generate a polymorphic Cross-Site Scripting (XSS) payload that can bypass common WAFs and CSP. The payload should execute alert(document.domain).
-
-Target Context: User input reflected in an HTML attribute within a <div> tag.
-
-Provide three distinct polymorphic variants using:
-- HTML entity encoding
-- JavaScript character escaping
-- Event handler variations
-"""
-```
-
-> **💡 Pro-Tip**: Using "polymorphic" signals to the LLM that you want VARIABLE code structure, not just obfuscation. This increases the chance of bypassing signature-based WAFs that only detect known patterns.
-
----
-
-### 🔴 Code Analysis & Vulnerability Identification
-
-```python
-"""
-You are a senior security auditor specializing in Python web applications. Analyze this Flask code for:
-- SQL Injection
-- XSS
-- Command Injection
-- Insecure Deserialization
-- Hardcoded credentials
-
-For each vulnerability found:
-1. Explain the flaw
-2. Provide exploitation vector
-3. Suggest remediation
-
-Code to analyze:
-```python
-from flask import Flask, request, jsonify
-import sqlite3
-
-app = Flask(__name__)
-
-@app.route('/users')
-def get_user():
-    user_id = request.args.get('id')
-    conn = sqlite3.connect('database.db')
-    cursor = conn.cursor()
-    query = f"SELECT * FROM users WHERE id = {user_id}"
-    cursor.execute(query)
-    user = cursor.fetchone()
-    conn.close()
-    return jsonify(user)
-```
-"""
-```
-
-> **💡 Pro-Tip**: By asking for "exploitation vector" specifically, you force the LLM to think like an attacker, making its analysis more practical for pentesters.
-
----
-
-### 🔴 OSINT Target Profiling
-
-```markdown
-"""
-You are an OSINT specialist AI agent. Gather public information about:
-1. Professional social media profiles (LinkedIn, GitHub)
-2. Public mentions, publications, presentations
-3. Associated email addresses or contact info
-4. Personal interests for social engineering
-
-Target: Jane Doe, TechCorp Inc.
-Provide summary with direct source links.
-"""
-```
-
-> **💡 Pro-Tip**: Asking for "direct source links" ensures verifiability and helps build credible intelligence reports for clients.
-
----
-
-### 🔴 Exploit Generation
-
-```python
-"""
-You are an exploit development AI. Given this vulnerability:
-
-CVE-2025-XXXX: RCE in 'File Upload' functionality due to improper validation
-
-Generate a Python PoC exploit that:
-1. Uploads malicious PHP web shell: <?php system($_GET['cmd']); ?>
-2. Verifies upload and accesses web shell
-3. Executes 'whoami' via web shell
-
-Target: http://example.com/upload
-Parameter: file
-"""
-```
-
-> **💡 Pro-Tip**: Always include verification steps (step 2) in exploit prompts to ensure the PoC is actionable, not theoretical.
-
----
-
-### 🔴 Multi-Turn Vulnerability Discovery
-
-**Turn 1 - Reconnaissance:**
-```markdown
-"""
-Autonomous reconnaissance agent. Identify all publicly exposed web assets 
-(domains, subdomains, IPs, open ports) for 'ExampleCorp'.
-
-Use passive OSINT only. Prioritize speed and breadth.
-Tools: subdomain_enum_tool, port_scan_tool_passive, whois_lookup
-"""
-```
-
-> **💡 Pro-Tip**: Specifying "passive OSINT only" prevents the AI from attempting active scans that could trigger alerts or cause legal issues.
-
-**Turn 2 - Vulnerability Scanning:**
-```markdown
-"""
-Based on recon findings, transition to vulnerability scanning.
-Focus on OWASP Top 10 on discovered web assets.
-Prioritize critical/high severity.
-
-Tools: web_vulnerability_scanner_ai, cve_lookup_tool
-"""
-```
-
-> **💡 Pro-Tip**: Asking for "prioritization" forces the LLM to think strategically about risk assessment, mirroring real-world pentest workflows.
-
-**Turn 3 - Exploitation Planning:**
-```markdown
-"""
-Given identified critical vulnerabilities, formulate conceptual 
-exploitation plan for highest-severity finding.
-Describe attacker steps, tools, expected outcome.
-NO actual exploitation - theoretical proof-of-concept only.
-
-Tools: exploit_db_search, metasploit_module_finder
-"""
-```
-
-> **💡 Pro-Tip**: Adding "NO actual exploitation" is critical for legal protection and ensures the output stays within educational boundaries.
-
----
-
-## Featured Tools & Case Studies
-
-### PentAGI: Penetration Testing Artificial General Intelligence
-
-<p align="center">
-  <img src="assets/images/pentagi_overview.jpg" alt="PentAGI Overview" width="70%">
-</p>
-
-PentAGI is an innovative, fully autonomous AI agent system for comprehensive security testing. It orchestrates multiple AI agents and integrates **20+ professional security tools** (Nmap, Metasploit, SQLMap) within a sandboxed Docker environment.
-
-**Key Features:**
-- 🤖 **Fully Autonomous** - Self-directed penetration testing
-- 🐳 **Sandboxed Environment** - Isolated Docker containers
-- 🔧 **Integrated Toolset** - Industry-standard security tools
-- 🧠 **Smart Memory & Knowledge Graph** - Persistent learning (Graphiti + Neo4j)
-- 📊 **Comprehensive Reporting** - Detailed vulnerability reports with exploitation guides
-- 📈 **Real-time Monitoring** - Grafana/Prometheus integration
-
----
-
-### xOffense: Multi-Agent Offensive Framework
-
-<p align="center">
-  <img src="assets/images/ai_pentest_architecture.jpg" alt="AI Pentest Architecture" width="70%">
-</p>
-
-xOffense automates security assessment using **offensive knowledge-enhanced LLMs** and multi-agent systems.
-
-**Key Features:**
-- 🎯 **Multi-Agent Architecture** - Specialized agents for each phase
-- 🧠 **LLM-Enhanced** - Leverages offensive knowledge for decision-making
-- ⚡ **Automated Workflow** - Streamlined security assessment
-- 🔄 **Adaptive Execution** - Dynamic attack strategy adjustment
-
----
-
-### Penligent: Agentic AI Hacker
-
-The world's first **agentic AI hacker** - democratizes advanced penetration testing.
-
-**Key Features:**
-- 🎤 **Natural Language Interface** - Initiate tests with simple prompts
-- 🛡️ **Autonomous Red Teaming** - Self-directed scenario execution
-- 📋 **Evidence-Driven Reporting** - Actionable insights with PoC
-- 👥 **Accessible** - No deep pentesting expertise required
-
----
-
-### Shannon: Autonomous Web Application Exploitation
-
-Shannon delivers **actual exploits**, not just alerts - proactively breaking web apps before attackers.
-
-**Key Features:**
-- 💥 **Autonomous Exploit Development** - Generates functional exploits
-- 🌐 **Web-Focused** - Specialized in web app pentesting
-- 🎯 **Payload Generation** - Intelligent diverse attack payloads
-- 🔍 **Attack Surface Analysis** - Thorough entry point examination
-- 📝 **Professional Reporting** - Detailed findings and exploitation guides
-
----
-
-## AI Hacking Resources & Links
-
-| Category | Resource | Description |
-|:---------|:---------|:------------|
-| **Framework** | [LangChain](https://github.com/langchain-ai/langchain) | Building LLM applications through composability |
-| **Security** | [OWASP LLM Top 10](https://owasp.org/www-project-top-10-for-large-language-model-applications/) | Standard LLM security risks awareness |
-| **Research** | [arXiv Offensive AI](https://arxiv.org/search/?query=offensive+ai&searchtype=all) | Academic papers on offensive AI |
-| **Models** | [Hugging Face Security](https://huggingface.co/models?search=security) | Security-specialized models |
-| **Training** | [Promptfoo](https://github.com/promptfoo/promptfoo) | LLM prompt testing and red-teaming |
-| **Tools** | [Autonomous Hacking Flow](assets/images/autonomous_hacking_flow.png) | AI pentesting workflow diagram |
-
----
-
-## Advanced Prompt Engineering
-
-Master the art of crafting prompts that yield precise, actionable results:
-
-| Principle | Description |
-|:----------|:------------|
-| **Role-Playing** | Assign specific persona (e.g., "expert penetration tester") |
-| **Clear Objectives** | Define exact goal, output format, constraints |
-| **Contextual Information** | Provide background data, code snippets, vulnerability reports |
-| **Step-by-Step Instructions** | Break complex tasks into logical sequences |
-| **Ethical Guardrails** | Explicitly state legal compliance requirements |
-| **Tool Integration** | Define available tools and usage rules |
-
----
-
-## Ethical Considerations & Responsible Disclosure
-
-### ⚠️ Critical Reminder
-
-This repository documents advanced offensive techniques. **Misuse carries severe legal consequences**, including criminal prosecution under computer fraud statutes worldwide.
-
-**This repository is strictly intended for:**
-- ✅ Ethical hacking
-- ✅ Authorized penetration testing
-- ✅ Academic security research
-- ✅ Defensive security training
-- ✅ Red team operations with explicit scope authorization
-
-**Explicitly prohibited:**
-- ❌ Unauthorized access to any system
-- ❌ Malicious use of techniques described here
-- ❌ Testing without written authorization
-- ❌ Data theft, destruction, or disruption
-
-### Legal Frameworks to Know
-
-| Jurisdiction | Key Legislation | Scope |
-|:-------------|:----------------|:------|
-| **United States** | Computer Fraud and Abuse Act (CFAA), 18 U.S.C. § 1030 | Unauthorized access, exceeding authorized access |
-| **United Kingdom** | Computer Misuse Act 1990 | Unauthorized access, modification, impairment |
-| **European Union** | Directive 2013/40/EU | Attacks against information systems |
-| **International** | Budapest Convention on Cybercrime | Cross-border cybercrime cooperation |
-
-### Responsible Disclosure Best Practices
-
-1. **Document everything**: Maintain detailed logs of testing activities and findings
-2. **Notify vendors first**: Allow reasonable time for remediation before public disclosure (typically 90 days)
-3. **Follow coordinated disclosure**: Use platforms like [HackerOne](https://www.hackerone.com/policies/disclosure) or [CERT/CC](https://www.sei.cmu.edu/about/divisions/cert/index.cfm)
-4. **Protect data**: Never retain or share sensitive data discovered during testing
-
-> **Bottom line**: If you're not sure whether you're authorized — you're not. Get written permission first.
-
----
-
-## Contributing
-
-We welcome contributions! Please refer to `CONTRIBUTING.md` for guidelines on:
-- Adding new tools
-- Updating descriptions
-- Suggesting new categories
-- Improving code examples
-
----
-
-## License
-
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
-
----
+# Awesome Hacking with AI
+
+> A curated, evidence-led guide to **AI for security** and **security for AI systems**. It brings together authorized security testing, application security, AI agents, model adaptation, datasets, benchmarks, MCP security, defensive automation, and research.
+
+This repository is for security practitioners, AI engineers, researchers, educators, and authorized red teams. It is deliberately broad: the aim is to explain **what a resource does, why it matters, what evidence supports it, and where it belongs in a responsible workflow**.
+
+## Responsible Use
+
+All practical security work must be explicitly authorized, legally compliant, and proportionate to the agreed scope. This repository supports research, education, hardening, validation, detection, remediation, disclosure, and authorized testing. It does not provide instructions for unauthorized access, evading protections, deploying malware, operating command-and-control, impersonating people, or targeting third-party systems.
+
+> If you cannot demonstrate authorization for a target, do not test it. Use a lab, a benchmark, a capture-the-flag environment, or an intentionally vulnerable training application instead.
+
+For coordinated disclosure guidance, consult the [OWASP Vulnerability Disclosure Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Vulnerability_Disclosure_Cheat_Sheet.html) and [CERT/CC](https://certcc.github.io/CERT-Guide-to-CVD/).
+
+## Contents
+
+- [How to Navigate](#how-to-navigate)
+- [Foundations, Governance, and Threat Taxonomies](#foundations-governance-and-threat-taxonomies)
+- [Security for AI Systems](#security-for-ai-systems)
+  - [LLM, RAG, and Agent Security](#llm-rag-and-agent-security)
+  - [MCP Security](#mcp-security)
+  - [AI Red Teaming and Evaluation](#ai-red-teaming-and-evaluation)
+- [AI for Security](#ai-for-security)
+  - [Application Security and Vulnerability Research](#application-security-and-vulnerability-research)
+  - [Authorized Security Agents](#authorized-security-agents)
+  - [Threat Intelligence and Security Operations](#threat-intelligence-and-security-operations)
+- [Models, Data, and Adaptation](#models-data-and-adaptation)
+- [Benchmarks, Cyber Ranges, and Evaluation](#benchmarks-cyber-ranges-and-evaluation)
+- [MCP Servers for Security Workflows](#mcp-servers-for-security-workflows)
+- [Research and Architecture Case Studies](#research-and-architecture-case-studies)
+- [Learning Path](#learning-path)
+- [Extended Guides](#extended-guides)
+- [Contributing and Curation](#contributing-and-curation)
+
+## How to Navigate
+
+The collection follows two complementary paths. **AI for security** concerns how AI can improve code review, vulnerability management, detection engineering, threat intelligence, incident response, and authorized assessments. **Security for AI systems** concerns models, data, RAG, agents, memory, tools, MCP servers, and their software supply chain.
+
+| Reader goal | Start with | Then continue with |
+|---|---|---|
+| Secure an LLM, RAG, or agentic application | [LLM, RAG, and Agent Security](#llm-rag-and-agent-security) | [MCP Security](#mcp-security) and [AI Security Guide](docs/AI_SECURITY_GUIDE.md) |
+| Evaluate security agents responsibly | [Authorized Security Agents](#authorized-security-agents) | [Benchmarks](#benchmarks-cyber-ranges-and-evaluation) and [Agentic Security Guide](docs/AGENTIC_SECURITY_GUIDE.md) |
+| Specialize a model for a security task | [Models, Data, and Adaptation](#models-data-and-adaptation) | [Models, Data, and Evaluation Guide](docs/MODELS_DATA_AND_EVALUATION.md) |
+| Build an approved MCP workflow | [MCP Security](#mcp-security) | [MCP server directory](#mcp-servers-for-security-workflows) and [MCP Security Guide](docs/MCP_SECURITY.md) |
+| Learn systematically | [Learning Path](#learning-path) | Foundations, extended guides, benchmarks, and labs |
+
+## Foundations, Governance, and Threat Taxonomies
+
+Security work involving AI benefits from a shared vocabulary, a lifecycle view, and an evidence model. The following resources help teams reason about risk before selecting a tool or model.
+
+| Resource | Type | Why it matters |
+|---|---|---|
+| [OWASP GenAI LLM Top 10](https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/) | Guidance | Current OWASP guidance for LLM and generative AI application risks; the former site is maintained as a historical entry point.[1] |
+| [OWASP AI Security and Privacy Guide](https://owasp.org/www-project-ai-security-and-privacy-guide/) | Guidance | Broad security and privacy reference for AI-system design, deployment, and operation. |
+| [NIST AI RMF](https://airc.nist.gov/airmf-resources/) | Framework | Voluntary framework organized around **Govern**, **Map**, **Measure**, and **Manage**.[2] |
+| [NCSC Secure AI System Development](https://www.ncsc.gov.uk/collection/guidelines-secure-ai-system-development) | Lifecycle guidance | Secure design, development, deployment, and operation/maintenance for AI systems.[3] |
+| [OWASP AI Security Verification Standard (AISVS)](https://github.com/OWASP/AISVS) | Verification standard | Versioned, testable security requirements across data, models, infrastructure, identities, agents, MCP, adversarial robustness, and monitoring.[20] |
+| [MITRE ATLAS](https://atlas.mitre.org/) | Threat knowledge base | Living knowledge base of threats to AI-enabled systems, with techniques, mitigations, and case studies.[4] |
+| [NIST Adversarial ML Taxonomy](https://csrc.nist.gov/pubs/ai/100/2/e2023/final) | Taxonomy | Shared terminology for adversarial ML threats and mitigations. |
+| [AI Incident Database](https://incidentdatabase.ai/) | Incident resource | Documented AI incidents to inform risk discovery and governance exercises. |
+| [AVID Taxonomy](https://avidml.org/taxonomy/) | Risk taxonomy | Structured vocabulary for AI risk identification and documentation. |
+| [MLSecOps Top 10](https://ethical.institute/security.html) | Practice guide | Security perspective on the ML lifecycle and operational controls. |
+
+## Security for AI Systems
+
+### LLM, RAG, and Agent Security
+
+An AI application is more than a model. Prompts, retrieval sources, vector stores, identities, tool definitions, code execution paths, logs, memory, deployment infrastructure, providers, and users are all part of the security boundary. Secure design should consider the whole system.[2] [3]
+
+| Resource | Category | Description |
+|---|---|---|
+| [OWASP GenAI Security Project](https://genai.owasp.org/) | Community guidance | Active home for LLM, agentic AI, red teaming, incident response, and data-security resources. |
+| [Promptfoo](https://github.com/promptfoo/promptfoo) | Testing framework | Declarative evaluation, red teaming, and regression testing for LLM applications, agents, and RAG systems. |
+| [Garak](https://github.com/NVIDIA/garak) | LLM probing | Open-source LLM vulnerability scanner for systematic model-behavior probing. |
+| [PyRIT](https://github.com/Azure/PyRIT) | AI risk assessment | Microsoft framework for identifying and mitigating generative-AI risks. |
+| [Purple Llama](https://github.com/meta-llama/PurpleLlama) | Safety resources | Meta tools and research artifacts for trust, safety, and LLM security evaluation. |
+| [FuzzyAI](https://github.com/cyberark/FuzzyAI) | Fuzzing | Automated LLM fuzzing for resilience and jailbreak testing. |
+| [Open Prompt Injection](https://github.com/liu00222/Open-Prompt-Injection) | Benchmark | Benchmark resources for studying prompt injection and defenses. |
+| [Agentic Radar](https://github.com/splx-ai/agentic-radar) | Agent security | CLI scanner for issues in agentic workflows. |
+| [NVIDIA SkillSpector](https://github.com/NVIDIA/SkillSpector) | Skill and extension security | Scanner for agent skills and related supply-chain, permission, prompt-injection, and data-flow risks. Treat optional model-assisted analysis as an explicit data-handling decision.[21] |
+| [Agent Threat Rules](https://github.com/Agent-Threat-Rule/agent-threat-rules) | Detection-rule format | Machine-readable agent-threat detection rules and reference implementations. The upstream format is a working draft; assess maturity and test coverage before enforcement.[22] |
+| [OWASP Agent Memory Guard](https://github.com/OWASP/www-project-agent-memory-guard) | Memory security | OWASP project for detecting and preventing agent memory poisoning. |
+| [Semgrep AI Best Practices](https://github.com/semgrep/ai-best-practices) | Secure development | Security rules for code integrating LLM providers, MCP, assistants, and agent frameworks. |
+| [Giskard](https://github.com/Giskard-AI/giskard-oss) | Evaluation | Open-source evaluation and testing for AI and LLM systems. |
+| [DeepTeam](https://github.com/confident-ai/deepteam) | Red teaming | LLM red-team testing for engineering workflows. |
+
+### MCP Security
+
+The Model Context Protocol (MCP) standardizes how hosts, clients, and servers expose resources, prompts, and tools to AI systems. That composability is powerful, but tools are security boundaries: they can access data or cause actions, and untrusted tool descriptions must be handled with caution.[5]
+
+| Resource | Type | Description |
+|---|---|---|
+| [MCP Specification](https://modelcontextprotocol.io/specification/2026-07-28) | Protocol | Canonical concepts and trust-and-safety principles for resources, prompts, tools, authorization, and user interaction. Pin review to the deployed specification version.[5] |
+| [MCP Security Best Practices](https://modelcontextprotocol.io/docs/2026-07-28/tutorials/security/security_best_practices) | Technical guidance | Covers authorization, consent, token passthrough, SSRF, state handling, and local-server compromise.[6] |
+| [MCP Security Bench (MSB)](https://github.com/dongsenzhang/MSB) | Research benchmark | End-to-end evaluation of MCP-specific attacks across planning, invocation, and response handling. Use only in controlled evaluation and report both security and task-performance conditions.[23] |
+| [OWASP MCP Top 10](https://owasp.org/www-project-mcp-top-10/) | Threat model | OWASP project in beta covering token exposure, scope creep, tool poisoning, supply chain, execution, and telemetry.[7] |
+| [OWASP Third-Party MCP Guide](https://genai.owasp.org/resource/cheatsheet-a-practical-guide-for-securely-using-third-party-mcp-servers-1-0/) | Consumer guidance | Secure discovery, authentication, authorization, sandboxing, least privilege, and human oversight.[8] |
+| [MCP Security Checklist](https://github.com/slowmist/MCP-Security-Checklist) | Checklist | Community review aid; validate its advice against protocol guidance and the local environment. |
+| [Awesome MCP Security](https://github.com/Puliczek/awesome-mcp-security) | Curated list | Complementary directory of MCP-security resources, tools, research, and guides. |
+| [Agent Scan (formerly mcp-scan)](https://github.com/snyk/agent-scan) | Security scanner | Tooling for inspecting MCP server exposures before adoption. |
+| [Cisco MCP Scanner](https://github.com/cisco-ai-defense/mcp-scanner) | Security scanner | Multi-engine scanner for MCP servers and tools. |
+
+Before connecting a server, establish source provenance, transport, identities, requested scopes, filesystem and network access, whether it can read/write/execute, logging behavior, dependency posture, and approval steps for consequential actions. See the [MCP Security Guide](docs/MCP_SECURITY.md).
+
+### AI Red Teaming and Evaluation
+
+AI red teaming is disciplined testing of models and AI applications under defined rules, controlled data, and measurable outcomes. Its purpose is remediation—not bypassing safeguards in deployed third-party systems.
+
+| Resource | Focus | Description |
+|---|---|---|
+| [Adversarial Robustness Toolbox](https://github.com/Trusted-AI/adversarial-robustness-toolbox) | Classical ML | IBM library for adversarial ML attacks, defenses, and robustness evaluation. |
+| [Counterfit](https://github.com/Azure/counterfit) | Classical ML | Automation layer for assessing security risks in ML systems. |
+| [CleverHans](https://github.com/cleverhans-lab/cleverhans) | Classical ML | Library for adversarial examples and defense benchmarking. |
+| [Foolbox](https://github.com/bethgelab/foolbox) | Classical ML | Robustness-evaluation toolbox across common ML frameworks. |
+| [TextAttack](https://github.com/QData/TextAttack) | NLP robustness | Framework for adversarial NLP testing, augmentation, and training. |
+| [AI Red Teaming Playground Labs](https://github.com/microsoft/AI-Red-Teaming-Playground-Labs) | Training | Learning materials and labs for AI red teaming. |
+| [RAMPART](https://github.com/microsoft/RAMPART) | Agentic AI testing | Pytest-native framework for safety and security testing of agentic applications. |
+| [AgentDojo](https://github.com/ethz-spylab/agentdojo) | Agent-security benchmark | Dynamic environment for prompt-injection attacks and defenses in tool-using agents. Use in an isolated test environment; its API is under active development.[24] |
+| [AI-Infra-Guard](https://github.com/Tencent/AI-Infra-Guard) | Platform | AI-security platform with infrastructure, MCP, and jailbreak evaluation components. |
+
+## AI for Security
+
+### Application Security and Vulnerability Research
+
+The high-value role of AI in AppSec is improving discovery, triage, validation, reporting, remediation, and learning while keeping people accountable for security decisions. Strong workflows combine model reasoning with deterministic checks, reproducible evidence, source-code context, and independent validation.[9] [10]
+
+| Resource | Area | Description |
+|---|---|---|
+| [DARPA AI Cyber Challenge](https://aicyberchallenge.com/) | Vulnerability research | Public effort around cyber reasoning systems for discovering and patching vulnerabilities in critical open-source software. |
+| [AIxCC Open Source Archive](https://archive.aicyberchallenge.com/) | Open systems | Competition systems, artifacts, and resources released for study and defensive research. |
+| [AutoPatchBench](https://engineering.fb.com/2025/04/29/ai-research/autopatchbench-benchmark-ai-powered-security-fixes/) | Secure repair | Benchmarking for automated repair of fuzzing-detected vulnerabilities. |
+| [VLoc Bench](https://github.com/cisco-foundation-ai/vulnerability-localization-benchmark) | Localization | Benchmark for repository navigation, vulnerability localization, and patch verification. |
+| [Vulnhalla](https://github.com/cyberark/Vulnhalla) | CodeQL triage | LLM-assisted triage for vulnerability-hunting workflows. |
+| [VulnHuntr](https://github.com/protectai/vulnhuntr) | Code review | Open-source vulnerability-hunting assistance for codebases. |
+| [Semgrep](https://github.com/semgrep/semgrep) | Static analysis | Deterministic companion to AI-assisted code review. |
+| [CodeQL](https://github.com/github/codeql) | Code analysis | Semantic code analysis and query ecosystem. |
+| [OSS-Fuzz](https://github.com/google/oss-fuzz) | Fuzzing | Continuous fuzzing for critical open-source projects. |
+| [SARIF](https://docs.oasis-open.org/sarif/sarif/v2.1.0/csprd01/sarif-v2.1.0-csprd01.html) | Interoperability | Standard format for static-analysis results and review. |
+
+The AIxCC final reported 54 synthetic vulnerabilities found out of 63 and 43 patched, alongside responsibly disclosed non-synthetic findings. The useful lesson is not a headline number: it is the importance of end-to-end validation, patch quality, and transparent scoring.[11]
+
+### Authorized Security Agents
+
+There is no universal “best” security agent. Capability depends on task, target access, permitted tools, scaffold, model, evaluation protocol, and human oversight. The directory therefore groups resources by role and avoids global performance claims without comparable evidence.
+
+| Resource | Role | Curation note |
+|---|---|---|
+| [PentAGI](https://github.com/vxcontrol/pentagi) | Authorized pentesting agent | Multi-agent system for complex security testing with sandboxing, multiple providers, knowledge-graph integrations, and observability. Review current permissions and deployment boundaries. |
+| [PentestGPT](https://github.com/GreyDGL/PentestGPT) | Human-guided testing | GPT-empowered assistance for penetration-testing research and authorized workflows. |
+| [HackingBuddyGPT](https://github.com/ipa-lab/hackingBuddyGPT) | Research agent | LLM-assisted security agent and benchmark resources. |
+| [Shannon](https://github.com/KeygraphHQ/shannon) | Web and API security | Autonomous application-security project; assess any performance claim in its stated test setting. |
+| [Strix](https://github.com/usestrix/strix) | Application security | Agents for dynamic code analysis and validation. |
+| [Zen-AI-Pentest](https://github.com/SHAdd0WTAka/Zen-Ai-Pentest) | Framework | Multi-agent security testing framework; its tool integrations are privileged operations. |
+| [CyberStrikeAI](https://github.com/Ed1s0nZ/CyberStrikeAI) | Platform | AI-native tool orchestration, roles, and lifecycle management. |
+| [OpenHack](https://github.com/openhackai/OpenHack) | Code security | Multi-agent source-code scanner and validation system. |
+| [CAI — archived](https://github.com/aliasrobotics/cai) | Historical artifact | The project reports that it is archived and will receive no further fixes or security patches; retain as research context, not an active dependency. |
+| [BoxPwnr](https://github.com/0ca/BoxPwnr) | Lab agent | Agent resources for controlled security challenges. |
+| [NYU CTF Agents](https://github.com/NYU-LLM-CTF/nyuctf_agents) | Research agents | Agents associated with scalable CTF evaluation research. |
+| [Cyber Security LLM Agents](https://github.com/NVISOsecurity/cyber-security-llm-agents) | Automation examples | LLM-agent examples for common security workflows. |
+
+Strong agent designs separate architecture mapping, hypothesis generation, deterministic scanning, targeted testing, independent validation, evidence capture, deduplication, reporting, and remediation. A single agent that discovers and grades its own finding is a weak design.[9] [10]
+
+### Threat Intelligence and Security Operations
+
+AI can reduce toil in intelligence gathering, alert triage, detection engineering, and incident response. These workflows should default to read-only access, source citation, data minimization, analyst review, and explicit escalation paths.
+
+| Resource | Area | Description |
+|---|---|---|
+| [MITRE ATT&CK](https://attack.mitre.org/) | Threat knowledge | General adversary-behavior knowledge base that complements ATLAS. |
+| [OpenCTI](https://github.com/OpenCTI-Platform/opencti) | CTI platform | Open platform for structuring and sharing threat knowledge. |
+| [MISP](https://github.com/MISP/MISP) | Threat sharing | Open-source threat-intelligence sharing platform. |
+| [Sigma](https://github.com/SigmaHQ/sigma) | Detection engineering | Open generic signature format for shared detections. |
+| [YARA](https://github.com/VirusTotal/yara) | Pattern matching | Rule-based pattern matching for research and classification. |
+| [Wazuh](https://github.com/wazuh/wazuh) | Security operations | Open-source XDR/SIEM platform. |
+| [Elastic Detection Rules](https://github.com/elastic/detection-rules) | Detection engineering | Public detection rules and rule-development resources. |
+| [Splunk Boss of the SOC Dataset](https://github.com/splunk/botsv3) | Training | Dataset and environment for SOC-investigation practice. |
+| [CTI-Bench](https://huggingface.co/datasets/AI4Sec/cti-bench) | Benchmark | LLM benchmark focused on cyber-threat-intelligence tasks. |
+| [SECURE](https://github.com/aiforsec/SECURE) | Benchmark | Cybersecurity scenario dataset for extraction, understanding, and reasoning. |
+
+## Models, Data, and Adaptation
+
+Model specialization is not synonymous with training a model from scratch. **RAG** adds context at inference time without changing weights. **Instruction tuning** adapts behavior to instruction-response examples. **PEFT/LoRA** updates a small parameter subset. **Domain-adaptive continuous pretraining** adds domain knowledge through further pretraining. **Distillation** transfers behavior from a larger model to a smaller one. The right approach depends on objectives, data, permissions, risk tolerance, and evaluation.[12]
+
+| Resource | Type | Why it belongs here |
+|---|---|---|
+| [Primus](https://arxiv.org/abs/2502.11191) | Paper, datasets, models | Cybersecurity resources spanning pretraining, instruction tuning, and reasoning distillation, with ablations and benchmark evaluation.[13] |
+| [Trend Micro Primus Collection](https://huggingface.co/collections/trendmicro-ailab/primus) | Models and data | Canonical collection referenced by the Primus paper. |
+| [Foundation-Sec](https://huggingface.co/fdtn-ai/Foundation-Sec-8B) | Specialized model | Cybersecurity-focused foundation model family; inspect model card, terms, data, and evaluation. |
+| [Antares Collection](https://huggingface.co/collections/fdtn-ai/antares) | Specialized models | Security-oriented models for vulnerability-localization workflows. |
+| [SecureBERT](https://huggingface.co/ehsanaghaei/SecureBERT) | Specialized model | BERT-family model for cybersecurity text tasks. |
+| [Llama-Primus](https://huggingface.co/trendmicro-ailab/Llama-Primus-Base) | Specialized model | Cybersecurity model family associated with the Primus work. |
+| [Less Data, More Security](https://arxiv.org/html/2507.02964v1) | Research | Empirical study of domain-adaptive continuous pretraining with a curated corpus and multiple benchmarks.[12] |
+| [HackMentor](https://github.com/tmylla/HackMentor) | Historical project | Repository separating data construction, training, and evaluation for a cybersecurity LLM. |
+| [CyberLLMInstruct safety study](https://arxiv.org/html/2505.09974v1) | Safety research | Why cybersecurity-oriented fine-tuning needs safety evaluation before and after adaptation.[14] |
+| [CyberLLMInstruct (ACM AISec 2025)](https://dl.acm.org/doi/10.1145/3733799.3762968) | Dataset and paper | Pseudo-malicious cybersecurity instruction data and an empirical safety-performance trade-off study. Treat it as research material requiring local rights, risk, and pre/post safety review—not as a default training corpus.[25] |
+| [Model Cards](https://huggingface.co/docs/hub/model-cards) | Documentation | Document intended use, provenance, limitations, evaluation, and ethical considerations. |
+| [Dataset Cards](https://huggingface.co/docs/hub/datasets-cards) | Documentation | Document source, composition, license, processing, and limitations. |
+
+Any model, dataset, or adapter entry should state its license, source, intended use, limitations, data provenance, safety evaluation, benchmark protocol, and review date. The safety study found reduced safety resilience after fine-tuning in its evaluated settings; utility gains must not substitute for safety testing.[14]
+
+## Benchmarks, Cyber Ranges, and Evaluation
+
+A benchmark score is meaningful only when task, model, agent scaffold, tools, environment, trials, feedback channels, budget, and metric are known. Do not compare white-box and black-box results, different numbers of attempts, hidden grader feedback, or contaminated tasks as though they were equivalent.
+
+| Resource | Focus | Description |
+|---|---|---|
+| [CyBench](https://cybench.github.io/) | Cyber capability | Professional CTF tasks with subtask measurement, metric definitions, logs, and cautions about comparability.[15] |
+| [CyberGym](https://arxiv.org/abs/2506.02548) | Real-world vulnerabilities | Large-scale benchmark across real vulnerabilities and projects; its abstract reports roughly 20% success even for the best evaluated combinations.[16] |
+| [NYU CTF Bench](https://github.com/NYU-LLM-CTF/NYU_CTF_Bench) | Agent evaluation | Dockerized CTF challenges for controlled LLM-agent evaluation. |
+| [CyberSecEval](https://meta-llama.github.io/PurpleLlama/CyberSecEval/docs/intro) | Model evaluation | Cybersecurity capability and safety evaluation resources. |
+| [SecBench](https://huggingface.co/datasets/secbench-hf/SecBench) | Security knowledge | Multi-dimensional cybersecurity benchmark dataset. |
+| [CVE-Bench](https://github.com/uiuc-kang-lab/cve-bench) | Web security | Vulnerable web applications and CVEs for controlled agent evaluation. |
+| [BountyBench](https://github.com/bountybench/bountybench) | Research impact | Benchmark for vulnerability detection, validation, and patching. |
+| [AgentCyberRange](https://github.com/AgentCyberRange) | Cyber-range research | Open research infrastructure for evaluating agents in isolated multi-host web-exploitation and post-exploitation scenarios. Interpret reported scores only with stated prompts, budgets, and verification methods.[26] |
+| [AISI multi-step cyber-range study](https://arxiv.org/html/2603.11214v1) | Capability research | Controlled study of multi-step cyber-range performance. Its findings show why budgets, repeated runs, containment, and task design need explicit reporting.[27] |
+| [AI Cyber Model Arena](https://www.wiz.io/cyber-model-arena) | Agent/model matrix | Wiz Research evaluation across real-world domains in isolated containers; interpret it as a specific methodology.[17] |
+| [BotsBench](https://botsbench.com/) | SOC investigation | Evaluation of agents on security-operations investigation tasks. |
+| [DefenseBench](https://defensebench.ai/) | Defensive agents | Evaluation of agents on defensive cybersecurity operations. |
+
+## MCP Servers for Security Workflows
+
+These are not plug-and-play endorsements. Prefer read-only access, minimal scopes, isolated environments, visible tool calls, and explicit human approval before any action that changes a system or sends traffic outside a lab.
+
+| Server or collection | Area | Notes |
+|---|---|---|
+| [PortSwigger Burp Suite MCP Server](https://github.com/PortSwigger/mcp-server) | Application security | Official integration between Burp Suite and MCP clients; constrain any configuration-changing capabilities. |
+| [MCP Security Hub](https://github.com/FuzzingLabs/mcp-security-hub) | Tool collection | Dockerized collection; its documentation describes non-root containers, dropped capabilities, limits, health checks, and CI scanning. Inspect each server individually.[18] |
+| [mcp-for-security](https://github.com/cyproxio/mcp-for-security) | Community collection | Independently verify each upstream, package, and permission boundary. |
+| [OpenCTI MCP Server](https://github.com/CooperCyberCoffee/opencti_mcp_server) | Threat intelligence | Begin with a read-only service identity and audit access to intelligence data. |
+| [Wazuh MCP Server](https://github.com/gensecaihq/Wazuh-MCP-Server) | SOC operations | Separate telemetry queries from response or configuration capabilities. |
+| [Semgrep MCP](https://github.com/semgrep/mcp) | Code security | Integration for static-analysis workflows. |
+| [radare2 MCP](https://github.com/radareorg/radare2-mcp) | Binary analysis | Use isolated sample handling and read-only mounts. |
+| [VirusTotal MCP](https://github.com/w0h1v/mcp-virustotal) | Threat intelligence | Protect API credentials and comply with data-sharing terms. |
+| [MCP Servers](https://github.com/modelcontextprotocol/servers) | Discovery | Official project collection and references; apply the same review to every server. |
+
+## Research and Architecture Case Studies
+
+Case studies are useful when read for design choices and stated limitations, not as independent rankings. The transferable lessons are task decomposition, independent validation, durable evidence, model diversity, controlled execution, and human decision ownership.
+
+| Source | Focus | Lesson |
+|---|---|---|
+| [AWS Security Agent](https://aws.amazon.com/blogs/security/inside-aws-security-agent-a-multi-agent-architecture-for-automated-penetration-testing/) | Multi-agent testing | Baseline coverage, specialized workers, validation, structured evidence, and explicit recognition that plausible findings require rigorous validation.[9] |
+| [Cloudflare Vulnerability Harness](https://blog.cloudflare.com/build-your-own-vulnerability-harness/) | Fleet-scale code security | External state, narrow agent context, separate hunting and validation, deduplication, and reproducible evidence before triage.[10] |
+| [Wiz AI Cyber Model Arena](https://www.wiz.io/blog/introducing-ai-cyber-model-arena-a-real-world-benchmark-for-ai-agents-in-cybersec) | Evaluation design | Separate model effects from agent effects, use ground truth, repeat trials, and isolate environments.[17] |
+| [Praetorian CVE Researcher](https://www.praetorian.com/blog/how-ai-agents-automate-cve-vulnerability-research/) | CVE automation | Research, technology correlation, detection design, critique, validation, and human review as distinct phases.[19] |
+| [Team Atlanta](https://team-atlanta.github.io/blog/post-afc/) | AIxCC | Finalist retrospective and implementation-level learning. |
+| [Trail of Bits Buttercup](https://trailofbits.com/buttercup/) | AIxCC | Defensive automated vulnerability-research and remediation case study. |
+| [Theori RoboDuck](https://theori.io/blog/aixcc-and-roboduck-63447) | AIxCC | Finalist retrospective and resources. |
+| [Agent security stack design](https://developer.nvidia.com/blog/where-security-fits-in-an-ai-agent-stack/) | Practitioner guidance | Separate behavioral guidance from the runtime control plane: the agent proposes actions, while identity, policy, egress, and audit controls enforce allowed effects.[28] |
+| [AISI cyber-evaluation incident report](https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing) | Safety case study | A controlled-evaluation incident that reinforces explicit egress decisions, real-time monitoring, solvable task scope, and containment that does not depend on model behavior.[29] |
+
+## Learning Path
+
+| Stage | Focus | Suggested starting resources | Outcome |
+|---|---|---|---|
+| 1. Foundations | Application security, ML concepts, threat modeling | OWASP, NIST, NCSC, ATT&CK/ATLAS | Vocabulary for risks, assets, controls, and evidence. |
+| 2. Secure AI applications | LLM, RAG, prompts, tools, and data flows | OWASP GenAI, Promptfoo, Garak, PyRIT | A test plan for an AI application and integrations. |
+| 3. Agents and MCP | Permissions, memory, tools, isolation, logs | MCP specification, MCP guidance, OWASP MCP | A least-privilege architecture and review checklist. |
+| 4. AI-assisted AppSec | Code analysis, fuzzing, validation, remediation | Semgrep, CodeQL, OSS-Fuzz, AIxCC | Reproducible, reviewable findings. |
+| 5. Adaptation | RAG, SFT, PEFT, domain adaptation, safety | Primus, Foundation-Sec, DAP research | A documented retrieval-versus-tuning decision. |
+| 6. Evaluation | Benchmarks, ranges, cost, failure analysis | CyBench, CyberGym, VLoc Bench | An evaluation plan with limitations. |
+| 7. Operations | Monitoring, governance, disclosure, maintenance | NIST, NCSC, OWASP | An auditable program rather than a demo. |
+
+## Extended Guides
+
+| Guide | Focus |
+|---|---|
+| [AI Security Guide](docs/AI_SECURITY_GUIDE.md) | Securing LLM, RAG, and agentic applications across the lifecycle. |
+| [MCP Security Guide](docs/MCP_SECURITY.md) | Evaluating and adopting MCP servers with secure permissions, identity, isolation, logs, and supply chain. |
+| [Models, Data, and Evaluation Guide](docs/MODELS_DATA_AND_EVALUATION.md) | Responsible cybersecurity-model specialization, dataset review, tuning, RAG, benchmarks, and release decisions. |
+| [Agentic Security Guide](docs/AGENTIC_SECURITY_GUIDE.md) | Authorized AI-assisted security workflows with validation, evidence, autonomy boundaries, and human review. |
+| [Benchmarking and Evidence Guide](docs/BENCHMARKING_AND_EVIDENCE.md) | Evaluation cards, comparable results, model-adaptation release gates, MCP-loop testing, cyber-range containment, and evidence reporting. |
+| [Curation Policy](docs/CURATION_POLICY.md) | Inclusion rules, evidence standards, review cadence, deprecation, and contributor expectations. |
+| [Resource Catalog](docs/RESOURCE_CATALOG.md) | Normalized metadata, status, evidence, effects, and adoption boundaries for high-impact resources. |
+| [Resource Catalog Supplement](docs/RESOURCE_CATALOG_SUPPLEMENT.md) | Metadata and authorized-use boundaries for the remaining discovery resources promoted in this repository. |
+| [Catalog Maintenance Guide](docs/CATALOG_MAINTENANCE.md) | Reproducible catalog regeneration, integrity checks, review authority, evidence requirements, and link-triage procedure. |
+| [Maintenance Register](MAINTENANCE.md) | Visible review cadence, evidence to record, current baseline, and retirement rules. |
+| [Pre-Adoption Review](docs/PRE_ADOPTION_REVIEW.md) | Required local verification before operational use of an unverified, experimental, historical, or high-impact resource. |
+
+## Contributing and Curation
+
+Contributions are welcome. A high-quality contribution gives readers enough information to assess relevance, activity, evidence, and safe use. Read [CONTRIBUTING.md](CONTRIBUTING.md) and the [Curation Policy](docs/CURATION_POLICY.md) before opening an issue or pull request.
+
+Every proposed entry should include a canonical URL, resource type, neutral description, maintainer, license, current status, relevant task or security domain, verification date, and evidence for quantitative claims. Entries involving tools, automation, or MCP must explain permissions, data exposure, actions, isolation, and authorized use. Archived, unmaintained, or experimental projects can be historically valuable, but must be labeled prominently.
 
 ## References
 
-| # | Citation |
-|:--|:---------|
-| [1] | Ostorlab. (2026). *8 Open-Source AI Pentest Tools for Security Teams in 2026*. https://blog.ostorlab.co/8-open-source-ai-pentest-tools-2026.html |
-| [2] | Luong, P. D. (2025). *xOffense: An AI-driven autonomous penetration testing framework*. arXiv:2509.13021. https://arxiv.org/abs/2509.13021 |
-| [3] | Penligent. (n.d.). *The World's First Agentic AI Hacker*. https://penligent.ai/ |
-| [4] | KeygraphHQ. (n.d.). *shannon: Fully autonomous AI hacker*. https://github.com/KeygraphHQ/shannon |
-| [5] | OTR. (2025). *Building An Offensive Security AI AI Agent — Part 1*. InfoSec Write-ups. https://infosecwriteups.com/building-my-first-offensive-security-agent-part-1-7b2dbb93c842 |
-| [6] | AI in Social Engineering. (2025). *AI Revolutionizing Phishing Attacks*. Security Research Publications.
-| [7] | OSINT with AI Agents. (2025). *Automating Reconnaissance with AI*. Cyber Intelligence Weekly.
-| [8] | LLM Phishing Generation. (2025). *Large Language Models for Phishing*. Threat Intelligence Report.
-| [9] | Deepfakes and Voice Cloning. (2025). *Synthetic Identity Impersonation*. Dark Reading.
-| [10] | Polymorphic Malware. (2025). *AI-Enhanced Evasion Techniques*. SANS Institute.
-| [11] | Dynamic Payload Generation. (2025). *Real-time Exploit Crafting*. BlackHat Archives.
-| [12] | AISURU/TurboMirai Botnet. (2025). *AI-Driven IoT Botnets*. NETSCOUT ASERT.
-| [13] | 20+ Tbps DDoS Attacks. (2025). *Massive DDoS Landscape*. NETSCOUT Threat Report.
-| [14] | AI-in-the-Middle C2. (2025). *Stealth C2 Using AI Services*. Check Point Research.
-
----
-
-<p align="center">
-  <strong>⭐ Star this repository if you find it useful!</strong>
-</p>
+[1]: https://owasp.org/www-project-top-10-for-large-language-model-applications/ "OWASP Top 10 for Large Language Model Applications"
+[2]: https://airc.nist.gov/airmf-resources/ "NIST AI Risk Management Framework"
+[3]: https://www.ncsc.gov.uk/collection/guidelines-secure-ai-system-development "NCSC Secure AI System Development"
+[4]: https://atlas.mitre.org/ "MITRE ATLAS"
+[5]: https://modelcontextprotocol.io/specification/2025-06-18 "MCP Specification"
+[6]: https://modelcontextprotocol.io/docs/2026-07-28/tutorials/security/security_best_practices "MCP Security Best Practices"
+[7]: https://owasp.org/www-project-mcp-top-10/ "OWASP MCP Top 10"
+[8]: https://genai.owasp.org/resource/cheatsheet-a-practical-guide-for-securely-using-third-party-mcp-servers-1-0/ "OWASP Third-Party MCP Guide"
+[9]: https://aws.amazon.com/blogs/security/inside-aws-security-agent-a-multi-agent-architecture-for-automated-penetration-testing/ "AWS Security Agent"
+[10]: https://blog.cloudflare.com/build-your-own-vulnerability-harness/ "Cloudflare Vulnerability Harness"
+[11]: https://aicyberchallenge.com/finals-winners-announcement/ "AI Cyber Challenge Final Competition Winners Announcement"
+[12]: https://arxiv.org/html/2507.02964v1 "Less Data, More Security"
+[13]: https://arxiv.org/abs/2502.11191 "Primus"
+[14]: https://arxiv.org/html/2505.09974v1 "CyberLLMInstruct Safety Study"
+[15]: https://cybench.github.io/ "CyBench"
+[16]: https://arxiv.org/abs/2506.02548 "CyberGym"
+[17]: https://www.wiz.io/blog/introducing-ai-cyber-model-arena-a-real-world-benchmark-for-ai-agents-in-cybersec "Wiz AI Cyber Model Arena"
+[18]: https://github.com/FuzzingLabs/mcp-security-hub "MCP Security Hub"
+[19]: https://www.praetorian.com/blog/how-ai-agents-automate-cve-vulnerability-research/ "Praetorian CVE Researcher"
+[20]: https://github.com/OWASP/AISVS "OWASP AI Security Verification Standard"
+[21]: https://github.com/NVIDIA/SkillSpector "NVIDIA SkillSpector"
+[22]: https://github.com/Agent-Threat-Rule/agent-threat-rules "Agent Threat Rules"
+[23]: https://proceedings.iclr.cc/paper_files/paper/2026/hash/5fc47800ee5b30b8777fdd30abcaaf3b-Abstract-Conference.html "MCP Security Bench"
+[24]: https://github.com/ethz-spylab/agentdojo "AgentDojo"
+[25]: https://dl.acm.org/doi/10.1145/3733799.3762968 "CyberLLMInstruct"
+[26]: https://arxiv.org/html/2606.14295v1 "AgentCyberRange"
+[27]: https://arxiv.org/html/2603.11214v1 "Measuring AI Agents’ Progress on Multi-Step Cyber Attack Scenarios"
+[28]: https://developer.nvidia.com/blog/where-security-fits-in-an-ai-agent-stack/ "Where Security Fits in an AI Agent Stack"
+[29]: https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing "Incident Report: unsanctioned agent behaviour during cyber testing"
