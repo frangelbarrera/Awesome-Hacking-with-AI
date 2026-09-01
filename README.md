@@ -170,6 +170,7 @@ There is no universal “best” security agent. Capability depends on task, tar
 | [Strix](https://github.com/usestrix/strix) | Application security | Agents for dynamic code analysis and validation. |
 | [Zen-AI-Pentest](https://github.com/SHAdd0WTAka/Zen-Ai-Pentest) | Framework | Multi-agent security testing framework; its tool integrations are privileged operations. |
 | [CyberStrikeAI](https://github.com/Ed1s0nZ/CyberStrikeAI) | Platform | AI-native tool orchestration, roles, and lifecycle management. |
+| [BugTraceAI](https://github.com/BugTraceAI/BugTraceAI) | Authorized security agent | Active Apache-2.0 open-source platform maintained by BugTraceAI for authorized security testing with multi-agent orchestration, independent validation, evidence capture, and reporting. Review tool permissions, scope, and isolation before use. |
 | [OpenHack](https://github.com/openhackai/OpenHack) | Code security | Multi-agent source-code scanner and validation system. |
 | [CAI — archived](https://github.com/aliasrobotics/cai) | Historical artifact | The project reports that it is archived and will receive no further fixes or security patches; retain as research context, not an active dependency. |
 | [BoxPwnr](https://github.com/0ca/BoxPwnr) | Lab agent | Agent resources for controlled security challenges. |
