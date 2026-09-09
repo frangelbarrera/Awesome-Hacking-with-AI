@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/images/logo.png" alt="Awesome Hacking with AI Logo" width="700">
+  <img src="assets/images/logo1.png" alt="Awesome Hacking with AI Logo" width="700">
 </p>
 
 ---
