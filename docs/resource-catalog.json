@@ -4,7 +4,7 @@
     "docs/RESOURCE_CATALOG.md",
     "docs/RESOURCE_CATALOG_SUPPLEMENT.md"
   ],
-  "entry_count": 116,
+  "entry_count": 117,
   "entries": [
     {
       "name": "OWASP GenAI LLM Top 10",
@@ -1377,6 +1377,17 @@
       "terms_and_status": "Site terms and status not verified at review date",
       "effects": "Knowledge",
       "adoption_boundary": "Use for retrospective context, not as an independent capability ranking."
+    },
+    {
+      "name": "Orca AI Incident Archive",
+      "canonical_url": "https://github.com/Continuum-AI-Corp/Orca-AI-Incident-Archive",
+      "catalog_source": "docs/RESOURCE_CATALOG_SUPPLEMENT.md",
+      "catalog_section": "Foundations, Documentation, and Case Studies",
+      "type": "Incident database",
+      "maintainer_source": "Continuum-AI-Corp",
+      "terms_and_status": "CC BY 4.0 per repository license; new project (created 2026-09-16), maintenance status not verified at review date (2026-09-24)",
+      "effects": "Knowledge",
+      "adoption_boundary": "Use records as contextual evidence; classifications are editorial, so check each record's linked primary sources before consequential decisions."
     }
   ]
 }
