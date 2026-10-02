@@ -333,3 +333,7 @@ Every proposed entry should include a canonical URL, resource type, neutral desc
 [27]: https://arxiv.org/html/2603.11214v1 "Measuring AI Agents’ Progress on Multi-Step Cyber Attack Scenarios"
 [28]: https://developer.nvidia.com/blog/where-security-fits-in-an-ai-agent-stack/ "Where Security Fits in an AI Agent Stack"
 [29]: https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing "Incident Report: unsanctioned agent behaviour during cyber testing"
+
+## Content review policy
+
+See [docs/content-review-policy.md](docs/content-review-policy.md).
