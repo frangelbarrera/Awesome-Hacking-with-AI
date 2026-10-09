@@ -4,7 +4,7 @@
     "docs/RESOURCE_CATALOG.md",
     "docs/RESOURCE_CATALOG_SUPPLEMENT.md"
   ],
-  "entry_count": 116,
+  "entry_count": 117,
   "entries": [
     {
       "name": "OWASP GenAI LLM Top 10",
@@ -1102,6 +1102,17 @@
       "terms_and_status": "License and current status not verified at review date",
       "effects": "Varies by listed server",
       "adoption_boundary": "Treat as discovery material only. Verify every upstream server, package, identity, data flow, and permission tier before installation."
+    },
+    {
+      "name": "REA",
+      "canonical_url": "https://github.com/morluto/rea",
+      "catalog_source": "docs/RESOURCE_CATALOG_SUPPLEMENT.md",
+      "catalog_section": "Additional MCP Discovery and Review Resources",
+      "type": "Reverse-engineering CLI and MCP server",
+      "maintainer_source": "morluto / REA contributors",
+      "terms_and_status": "Upstream declares [MIT](https://github.com/morluto/rea/blob/main/LICENSE); Review Required (2026-10-09)",
+      "effects": "Local reads, writes, and process execution, tool-dependent",
+      "adoption_boundary": "Analyze authorized copies in operator-provided isolation; REA is not a sandbox. The stdio client receives artifact/code evidence and controls forwarding to models. Review selected tool effects and evidence retention. Native deep analysis requires existing Hopper, Ghidra, or IDA; setup requires approval before configuration or installation changes. See [setup/provider documentation](https://github.com/morluto/rea/blob/main/docs/installation.md) and [CLI/Evidence guide](https://github.com/morluto/rea/blob/main/docs/cli.md)."
     },
     {
       "name": "Cisco MCP Scanner",
