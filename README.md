@@ -78,6 +78,7 @@ Security work involving AI benefits from a shared vocabulary, a lifecycle view, 
 | [AI Incident Database](https://incidentdatabase.ai/) | Incident resource | Documented AI incidents to inform risk discovery and governance exercises. |
 | [AVID Taxonomy](https://avidml.org/taxonomy/) | Risk taxonomy | Structured vocabulary for AI risk identification and documentation. |
 | [MLSecOps Top 10](https://ethical.institute/security.html) | Practice guide | Security perspective on the ML lifecycle and operational controls. |
+| [Orca AI Incident Archive](https://github.com/Continuum-AI-Corp/Orca-AI-Incident-Archive) | Incident resource | Open database of AI agent security incidents (prompt injection, agent supply chain, MCP, rogue agent actions); each record links at least one primary source and labels confirmed harm and AI involvement. Classifications are the editors', not official findings. |
 
 ## Security for AI Systems
 
