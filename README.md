@@ -102,6 +102,7 @@ An AI application is more than a model. Prompts, retrieval sources, vector store
 | [Semgrep AI Best Practices](https://github.com/semgrep/ai-best-practices) | Secure development | Security rules for code integrating LLM providers, MCP, assistants, and agent frameworks. |
 | [Giskard](https://github.com/Giskard-AI/giskard-oss) | Evaluation | Open-source evaluation and testing for AI and LLM systems. |
 | [DeepTeam](https://github.com/confident-ai/deepteam) | Red teaming | LLM red-team testing for engineering workflows. |
+| [Ironheights](https://github.com/Frank-Masciopinto/ironheights) | Skill and extension security | Apache-2.0 CLI that statically scans OpenClaw/ClawHub and other agent skill folders before install for instruction override, hidden text, credential reads, remote-exec install steps, and persistence; reads files as data and never executes them. Experimental (pre-1.0); a clean result does not prove a skill is safe. |
 
 ### MCP Security
 
