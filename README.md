@@ -199,6 +199,7 @@ There is no universal “best” security agent. Capability depends on task, tar
 | [BoxPwnr](https://github.com/0ca/BoxPwnr) | Lab agent | Agent resources for controlled security challenges. |
 | [NYU CTF Agents](https://github.com/NYU-LLM-CTF/nyuctf_agents) | Research agents | Agents associated with scalable CTF evaluation research. |
 | [Cyber Security LLM Agents](https://github.com/NVISOsecurity/cyber-security-llm-agents) | Automation examples | LLM-agent examples for common security workflows. |
+| [RedAmon](https://github.com/samugit83/redamon) | Authorized pentesting agent | MIT-licensed, self-hosted framework that maps attack surface into a graph, runs exploitation from a Kali sandbox behind human approval gates, and proposes fixes as pull requests. It executes commands against targets: review scope, tool permissions, and isolation before use. |
 
 Strong agent designs separate architecture mapping, hypothesis generation, deterministic scanning, targeted testing, independent validation, evidence capture, deduplication, reporting, and remediation. A single agent that discovers and grades its own finding is a weak design.[9] [10]
 
