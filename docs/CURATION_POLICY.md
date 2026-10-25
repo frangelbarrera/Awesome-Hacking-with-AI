@@ -98,6 +98,6 @@ Constructive rejection is part of keeping the collection useful. Maintainers sho
 
 ## References
 
-[1]: https://modelcontextprotocol.io/specification/2025-06-18 "MCP Specification"
+[1]: https://modelcontextprotocol.io/specification/2026-07-28 "MCP Specification"
 [2]: https://modelcontextprotocol.io/docs/2026-07-28/tutorials/security/security_best_practices "MCP Security Best Practices"
 [3]: https://owasp.org/www-project-mcp-top-10/ "OWASP MCP Top 10"

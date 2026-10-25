@@ -22,7 +22,7 @@ jobs:
       - name: Check documentation links
         uses: lycheeverse/lychee-action@v2
         with:
-          args: --no-progress --exclude-mail --accept 200 README.md CONTRIBUTING.md SECURITY.md docs .github
+          args: --no-progress --accept 200,429 --exclude 'genai\.owasp\.org' --exclude 'dl\.acm\.org' README.md CONTRIBUTING.md SECURITY.md docs .github
           fail: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

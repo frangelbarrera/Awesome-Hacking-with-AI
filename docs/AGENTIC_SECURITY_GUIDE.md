@@ -4,6 +4,10 @@ Security agents can accelerate research, code review, evidence gathering, detect
 
 > **An agent is a system, not a prompt.** Its effective capability is determined by model, scaffold, context, memory, tools, permissions, network access, environment, validators, policy checks, and human approvals.
 
+<p align="center">
+  <img src="../assets/images/react_agent_workflow.png" alt="Agent loop: reason about an observation, select a tool and parameters, execute it, and repeat until the goal is achieved" width="480">
+</p>
+
 ## 1. Separate Automation from Autonomy
 
 Teams should explicitly choose the level of automation permitted in each workflow. More autonomy is not automatically more valuable. A constrained, auditable process with a clear human decision point is often superior to an unconstrained system that produces unverifiable findings.

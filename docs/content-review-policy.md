@@ -1,5 +1,5 @@
 **Maintainer:** Frangel Raúl Crespo Barrera
-**Last verified:** 2026-10-02
+**Last verified:** 2026-10-25
 **Scope:** catalog links, scripts, sources, maintenance, and dual-use content.
 
 | Field | Current record |

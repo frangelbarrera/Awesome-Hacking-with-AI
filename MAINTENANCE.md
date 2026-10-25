@@ -15,9 +15,9 @@ This register makes the repository’s curation cadence visible. It is a mainten
 
 | Area | Last review | Status | Next due |
 |---|---|---|---|
-| Repository documentation and internal references | 2026-08-26 | Initial metadata and internal-link review completed | 2026-09-26 |
-| External-link availability | 2026-08-26 | Automated availability check completed; redirects require continuing manual triage | 2026-09-02 |
-| High-risk agents, MCP servers, models, datasets, and labs | 2026-08-26 | Catalog metadata established; pre-adoption upstream review remains mandatory | 2026-09-26 |
+| Repository documentation and internal references | 2026-10-25 | Internal references, navigation, and specification citations reviewed; dead links repaired | 2026-11-25 |
+| External-link availability | 2026-10-25 | Availability check completed; repaired the OWASP AI guide reference, replaced a removed upstream MCP collection, and fixed the link-check workflow | 2026-11-01 |
+| High-risk agents, MCP servers, models, datasets, and labs | 2026-10-25 | Catalog metadata extended and re-verified for new agent, MCP, practice-lab, and case-study entries; pre-adoption upstream review remains mandatory | 2026-11-25 |
 | Standards, protocol, and benchmark sources | 2026-08-26 | Canonical sources recorded; check for new editions or supersession | 2026-11-26 |
 | Full curation, evidence, and dual-use review | 2026-08-26 | Baseline policy and catalog review completed | 2027-02-26 |
 
@@ -38,7 +38,7 @@ Open an issue or pull request using the existing templates. State the date, revi
 
 ## Link-Triage Procedure
 
-The scheduled workflow treats unavailable links, including `429` rate limiting, as failures rather than silently accepting them. A maintainer should inspect the source, retry later when the cause is transient, and create an issue or pull request that records the URL, date, observed result, canonical replacement or retention rationale, and next review date. Retain a temporarily unavailable canonical source only when its value and owner remain clear; otherwise replace or retire it under the retirement rules below.
+The scheduled workflow treats unavailable links as failures rather than silently accepting them, while accepting `429` responses as tentatively reachable for manual recheck when they recur. Domains that reliably reject automated clients are excluded from the check and verified manually. A maintainer should inspect the source, retry later when the cause is transient, and create an issue or pull request that records the URL, date, observed result, canonical replacement or retention rationale, and next review date. Retain a temporarily unavailable canonical source only when its value and owner remain clear; otherwise replace or retire it under the retirement rules below.
 
 ## Retirement Rules
 

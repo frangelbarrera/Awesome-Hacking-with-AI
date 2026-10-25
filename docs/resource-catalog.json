@@ -4,7 +4,7 @@
     "docs/RESOURCE_CATALOG.md",
     "docs/RESOURCE_CATALOG_SUPPLEMENT.md"
   ],
-  "entry_count": 119,
+  "entry_count": 154,
   "entries": [
     {
       "name": "OWASP GenAI LLM Top 10",
@@ -291,19 +291,6 @@
       "effects": "Read, write, and execution-adjacent security-tool effects",
       "adoption_boundary": "Use only with explicit assessment scope. Bind to loopback or an approved private boundary; keep configuration-editing tools disabled unless needed and approved.",
       "evidence": "[Project README](https://github.com/PortSwigger/mcp-server)"
-    },
-    {
-      "name": "MCP Security Hub",
-      "canonical_url": "https://github.com/FuzzingLabs/mcp-security-hub",
-      "catalog_source": "docs/RESOURCE_CATALOG.md",
-      "catalog_section": "MCP Servers and Security-Workflow Integrations",
-      "type": "MCP-server collection",
-      "maintainer_source": "FuzzingLabs",
-      "terms": "MIT",
-      "status": "Active at review time",
-      "effects": "Varies per server; can include execution and network effects",
-      "adoption_boundary": "Review each server separately. Use non-root containers, minimal capabilities, read-only mounts, resource limits, egress controls, and explicit approval.",
-      "evidence": "[Project README](https://github.com/FuzzingLabs/mcp-security-hub)"
     },
     {
       "name": "Semgrep MCP",
@@ -774,6 +761,17 @@
       "adoption_boundary": "Review modules, credentials, egress, and tool effects before enabling any component."
     },
     {
+      "name": "Skill Scanner",
+      "canonical_url": "https://github.com/cisco-ai-defense/skill-scanner",
+      "catalog_source": "docs/RESOURCE_CATALOG_SUPPLEMENT.md",
+      "catalog_section": "AI-System Security and Evaluation",
+      "type": "Agent-skills security scanner",
+      "maintainer_source": "Cisco AI Defense",
+      "terms_and_status": "Repository license terms to review; active at 2026-10-25 review",
+      "effects": "Read / local analysis",
+      "adoption_boundary": "Scan skill packages before installation; validate findings and control any uploaded data."
+    },
+    {
       "name": "Vulnhalla",
       "canonical_url": "https://github.com/cyberark/Vulnhalla",
       "catalog_source": "docs/RESOURCE_CATALOG_SUPPLEMENT.md",
@@ -791,7 +789,7 @@
       "catalog_section": "Application Security, Code Analysis, and Vulnerability Research",
       "type": "Code-review tool",
       "maintainer_source": "Protect AI",
-      "terms_and_status": "License and current status not verified at review date",
+      "terms_and_status": "AGPL-3.0 per repository license; limited upstream activity at 2026-10-25 review",
       "effects": "Read / external query, configuration-dependent",
       "adoption_boundary": "Use read-only code access; protect proprietary source and validate findings."
     },
@@ -863,12 +861,12 @@
     },
     {
       "name": "CyberStrikeAI",
-      "canonical_url": "https://github.com/Ed1s0nZ/CyberStrikeAI",
+      "canonical_url": "https://github.com/AIPentest/CyberStrikeAI",
       "catalog_source": "docs/RESOURCE_CATALOG_SUPPLEMENT.md",
       "catalog_section": "Authorized Security Agents and Security Automation",
       "type": "Security automation platform",
-      "maintainer_source": "Ed1s0nZ",
-      "terms_and_status": "License and current status not verified at review date",
+      "maintainer_source": "AIPentest",
+      "terms_and_status": "Apache-2.0 per repository license; active at 2026-10-25 review",
       "effects": "Execution and network effects, configuration-dependent",
       "adoption_boundary": "Review roles, integrations, egress, and tool permissions before any authorized use."
     },
@@ -915,6 +913,138 @@
       "terms_and_status": "License and current status not verified at review date",
       "effects": "Read / external query, configuration-dependent",
       "adoption_boundary": "Treat as design examples; assess each integration’s data and permissions before use."
+    },
+    {
+      "name": "HexStrike AI",
+      "canonical_url": "https://github.com/0x4m4/hexstrike-ai",
+      "catalog_source": "docs/RESOURCE_CATALOG_SUPPLEMENT.md",
+      "catalog_section": "Authorized Security Agents and Security Automation",
+      "type": "Offensive-tooling MCP toolkit",
+      "maintainer_source": "0x4m4",
+      "terms_and_status": "MIT per repository license; active at 2026-10-25 review",
+      "effects": "Execution and network effects per tool, configuration-dependent",
+      "adoption_boundary": "Authorized lab use only; explicit tool allowlist, isolated network, and human approval for every consequential invocation."
+    },
+    {
+      "name": "Decepticon",
+      "canonical_url": "https://github.com/BitterSecurity/Decepticon",
+      "catalog_source": "docs/RESOURCE_CATALOG_SUPPLEMENT.md",
+      "catalog_section": "Authorized Security Agents and Security Automation",
+      "type": "Red-team agent",
+      "maintainer_source": "BitterSecurity",
+      "terms_and_status": "Apache-2.0 per repository license; active at 2026-10-25 review",
+      "effects": "Execution and network effects, configuration-dependent",
+      "adoption_boundary": "Written authorization, isolated environment, and approval gates before any action."
+    },
+    {
+      "name": "Darkmoon",
+      "canonical_url": "https://github.com/ASCIT31/Dark-Moon",
+      "catalog_source": "docs/RESOURCE_CATALOG_SUPPLEMENT.md",
+      "catalog_section": "Authorized Security Agents and Security Automation",
+      "type": "Autonomous pentesting framework",
+      "maintainer_source": "ASCIT31",
+      "terms_and_status": "GPL-3.0 per repository license; active at 2026-10-25 review",
+      "effects": "Execution and network effects, configuration-dependent",
+      "adoption_boundary": "Review permissions and isolation; restrict to authorized engagements with logging and stop conditions."
+    },
+    {
+      "name": "Nebula",
+      "canonical_url": "https://github.com/berylliumsec/nebula",
+      "catalog_source": "docs/RESOURCE_CATALOG_SUPPLEMENT.md",
+      "catalog_section": "Authorized Security Agents and Security Automation",
+      "type": "Pentesting harness",
+      "maintainer_source": "berylliumsec",
+      "terms_and_status": "BSD-2-Clause per repository license; active at 2026-10-25 review",
+      "effects": "Read / execution, workflow-dependent",
+      "adoption_boundary": "Use against authorized targets; validate every finding independently before reporting."
+    },
+    {
+      "name": "VulnClaw",
+      "canonical_url": "https://github.com/Netw0rkNoob/VulnClaw",
+      "catalog_source": "docs/RESOURCE_CATALOG_SUPPLEMENT.md",
+      "catalog_section": "Authorized Security Agents and Security Automation",
+      "type": "Vulnerability research agent",
+      "maintainer_source": "Netw0rkNoob",
+      "terms_and_status": "MIT per repository license; active at 2026-10-25 review",
+      "effects": "Execution and network effects, configuration-dependent",
+      "adoption_boundary": "Run only in isolated labs with a defined scope; review every stage of the pipeline."
+    },
+    {
+      "name": "PentestAgent",
+      "canonical_url": "https://github.com/GH05TCREW/pentestagent",
+      "catalog_source": "docs/RESOURCE_CATALOG_SUPPLEMENT.md",
+      "catalog_section": "Authorized Security Agents and Security Automation",
+      "type": "Black-box testing agent framework",
+      "maintainer_source": "GH05TCREW",
+      "terms_and_status": "MIT per repository license; active at 2026-10-25 review",
+      "effects": "Execution and network effects, configuration-dependent",
+      "adoption_boundary": "Its tool integrations are privileged operations; require authorization and isolation."
+    },
+    {
+      "name": "Pentest Swarm AI",
+      "canonical_url": "https://github.com/Armur-Ai/Pentest-Swarm-AI",
+      "catalog_source": "docs/RESOURCE_CATALOG_SUPPLEMENT.md",
+      "catalog_section": "Authorized Security Agents and Security Automation",
+      "type": "Agent swarm",
+      "maintainer_source": "Armur AI",
+      "terms_and_status": "AGPL-3.0 per repository license; active at 2026-10-25 review",
+      "effects": "Execution and network effects, configuration-dependent",
+      "adoption_boundary": "Constrain autonomy per stage; verify results before reporting."
+    },
+    {
+      "name": "Pentest AI Agents",
+      "canonical_url": "https://github.com/0xSteph/pentest-ai-agents",
+      "catalog_source": "docs/RESOURCE_CATALOG_SUPPLEMENT.md",
+      "catalog_section": "Authorized Security Agents and Security Automation",
+      "type": "Coding-agent subagents",
+      "maintainer_source": "0xSteph",
+      "terms_and_status": "MIT per repository license; active at 2026-10-25 review",
+      "effects": "Read / execution, scaffold-dependent",
+      "adoption_boundary": "Use inside an approved coding-agent sandbox with authorized targets only."
+    },
+    {
+      "name": "CTF Skills",
+      "canonical_url": "https://github.com/ljagiello/ctf-skills",
+      "catalog_source": "docs/RESOURCE_CATALOG_SUPPLEMENT.md",
+      "catalog_section": "Authorized Security Agents and Security Automation",
+      "type": "Agent skill collection",
+      "maintainer_source": "ljagiello",
+      "terms_and_status": "MIT per repository license; active at 2026-10-25 review",
+      "effects": "Read / execution in challenge environments",
+      "adoption_boundary": "Intended for CTF and lab use; review skills before installing them into any agent."
+    },
+    {
+      "name": "HackSynth",
+      "canonical_url": "https://github.com/aielte-research/HackSynth",
+      "catalog_source": "docs/RESOURCE_CATALOG_SUPPLEMENT.md",
+      "catalog_section": "Authorized Security Agents and Security Automation",
+      "type": "Research agent and benchmark",
+      "maintainer_source": "AiELTE Research",
+      "terms_and_status": "AGPL-3.0 per repository license; limited upstream activity at 2026-10-25 review",
+      "effects": "Controlled evaluation / execution",
+      "adoption_boundary": "Use as a research artifact; reproduce results only in isolated evaluation environments."
+    },
+    {
+      "name": "Open ReverseLab",
+      "canonical_url": "https://github.com/LING71671/open-reverselab",
+      "catalog_source": "docs/RESOURCE_CATALOG_SUPPLEMENT.md",
+      "catalog_section": "Authorized Security Agents and Security Automation",
+      "type": "Reverse-engineering agent platform",
+      "maintainer_source": "LING71671",
+      "terms_and_status": "GPL-3.0 per repository license; active at 2026-10-25 review",
+      "effects": "Local read / execution, tool-dependent",
+      "adoption_boundary": "Analyze authorized samples in isolation; review debugger and MCP integrations."
+    },
+    {
+      "name": "BugTraceAI",
+      "canonical_url": "https://github.com/BugTraceAI/BugTraceAI",
+      "catalog_source": "docs/RESOURCE_CATALOG_SUPPLEMENT.md",
+      "catalog_section": "Authorized Security Agents and Security Automation",
+      "type": "Authorized security-testing platform",
+      "maintainer_source": "BugTraceAI",
+      "terms_and_status": "Apache-2.0 per repository license; active at 2026-10-25 review",
+      "effects": "Execution and network effects, configuration-dependent",
+      "adoption_boundary": "Review tool permissions, scope, and isolation before use; validate findings independently."
     },
     {
       "name": "OpenCTI",
@@ -1170,13 +1300,101 @@
       "adoption_boundary": "Use for discovery only; every listed component needs independent validation before adoption."
     },
     {
-      "name": "OWASP AI Security and Privacy Guide",
-      "canonical_url": "https://owasp.org/www-project-ai-security-and-privacy-guide/",
+      "name": "GhidraMCP",
+      "canonical_url": "https://github.com/LaurieWired/GhidraMCP",
+      "catalog_source": "docs/RESOURCE_CATALOG_SUPPLEMENT.md",
+      "catalog_section": "Additional MCP Discovery and Review Resources",
+      "type": "Reverse-engineering MCP server",
+      "maintainer_source": "LaurieWired",
+      "terms_and_status": "Apache-2.0 per repository license; active at 2026-10-25 review",
+      "effects": "Local read / analysis; execution-adjacent via Ghidra",
+      "adoption_boundary": "Isolate untrusted samples, use read-only mounts, and review decompiler actions before applying them."
+    },
+    {
+      "name": "IDA Pro MCP",
+      "canonical_url": "https://github.com/mrexodia/ida-pro-mcp",
+      "catalog_source": "docs/RESOURCE_CATALOG_SUPPLEMENT.md",
+      "catalog_section": "Additional MCP Discovery and Review Resources",
+      "type": "Reverse-engineering MCP server",
+      "maintainer_source": "mrexodia",
+      "terms_and_status": "MIT per repository license; active at 2026-10-25 review",
+      "effects": "Local read / analysis",
+      "adoption_boundary": "Requires a licensed IDA installation; analyze authorized binaries only."
+    },
+    {
+      "name": "Reverse Engineering Assistant",
+      "canonical_url": "https://github.com/cyberkaida/reverse-engineering-assistant",
+      "catalog_source": "docs/RESOURCE_CATALOG_SUPPLEMENT.md",
+      "catalog_section": "Additional MCP Discovery and Review Resources",
+      "type": "Reverse-engineering MCP server",
+      "maintainer_source": "cyberkaida",
+      "terms_and_status": "Apache-2.0 per repository license; active at 2026-10-25 review",
+      "effects": "Local read / analysis",
+      "adoption_boundary": "Run against authorized samples in isolated analysis environments."
+    },
+    {
+      "name": "Wireshark MCP",
+      "canonical_url": "https://github.com/bx33661/Wireshark-MCP",
+      "catalog_source": "docs/RESOURCE_CATALOG_SUPPLEMENT.md",
+      "catalog_section": "Additional MCP Discovery and Review Resources",
+      "type": "Traffic-analysis MCP server",
+      "maintainer_source": "bx33661",
+      "terms_and_status": "MIT per repository license; active at 2026-10-25 review",
+      "effects": "Local read",
+      "adoption_boundary": "Keep packet captures inside authorized analysis environments; mind sensitive traffic in prompts."
+    },
+    {
+      "name": "MetasploitMCP",
+      "canonical_url": "https://github.com/GH05TCREW/MetasploitMCP",
+      "catalog_source": "docs/RESOURCE_CATALOG_SUPPLEMENT.md",
+      "catalog_section": "Additional MCP Discovery and Review Resources",
+      "type": "Exploitation-framework MCP server",
+      "maintainer_source": "GH05TCREW",
+      "terms_and_status": "Apache-2.0 per repository license; limited recent activity at 2026-10-25 review",
+      "effects": "Execution and network effects",
+      "adoption_boundary": "Dedicated lab use with explicit approval; treat every module invocation as a privileged action."
+    },
+    {
+      "name": "Shodan MCP",
+      "canonical_url": "https://github.com/w0h1v/mcp-shodan",
+      "catalog_source": "docs/RESOURCE_CATALOG_SUPPLEMENT.md",
+      "catalog_section": "Additional MCP Discovery and Review Resources",
+      "type": "Attack-surface MCP server",
+      "maintainer_source": "w0h1v",
+      "terms_and_status": "MIT per repository license; active at 2026-10-25 review",
+      "effects": "External query",
+      "adoption_boundary": "Protect API credentials; respect provider terms, quota limits, and data-sharing rules."
+    },
+    {
+      "name": "CVE MCP Server",
+      "canonical_url": "https://github.com/mukul975/cve-mcp-server",
+      "catalog_source": "docs/RESOURCE_CATALOG_SUPPLEMENT.md",
+      "catalog_section": "Additional MCP Discovery and Review Resources",
+      "type": "Vulnerability-intelligence MCP server",
+      "maintainer_source": "mukul975",
+      "terms_and_status": "Apache-2.0 per repository license; active at 2026-10-25 review",
+      "effects": "External query",
+      "adoption_boundary": "Review upstream API terms; do not submit sensitive data to third-party intelligence services."
+    },
+    {
+      "name": "MCP Registry",
+      "canonical_url": "https://registry.modelcontextprotocol.io/",
+      "catalog_source": "docs/RESOURCE_CATALOG_SUPPLEMENT.md",
+      "catalog_section": "Additional MCP Discovery and Review Resources",
+      "type": "Official server registry",
+      "maintainer_source": "Model Context Protocol project",
+      "terms_and_status": "Registry terms; reachable at 2026-10-25 review",
+      "effects": "Knowledge / discovery",
+      "adoption_boundary": "Discovery channel only; every listed server still needs its own provenance, permission, and effects review."
+    },
+    {
+      "name": "OWASP AI Exchange",
+      "canonical_url": "https://owaspai.org/",
       "catalog_source": "docs/RESOURCE_CATALOG_SUPPLEMENT.md",
       "catalog_section": "Foundations, Documentation, and Case Studies",
       "type": "Guidance",
       "maintainer_source": "OWASP",
-      "terms_and_status": "OWASP site terms; project status not verified at review date",
+      "terms_and_status": "OWASP site terms; reachable at 2026-10-25 review",
       "effects": "Knowledge",
       "adoption_boundary": "Use as non-binding guidance and record the consulted version."
     },
@@ -1401,6 +1619,50 @@
       "adoption_boundary": "Use for retrospective context, not as an independent capability ranking."
     },
     {
+      "name": "Emerging Security Practices for AI Agents",
+      "canonical_url": "https://www.frontiermodelforum.org/issue-briefs/emerging-security-practices-for-ai-agents/",
+      "catalog_source": "docs/RESOURCE_CATALOG_SUPPLEMENT.md",
+      "catalog_section": "Foundations, Documentation, and Case Studies",
+      "type": "Industry issue brief",
+      "maintainer_source": "Frontier Model Forum",
+      "terms_and_status": "Publisher terms; practitioner guidance",
+      "effects": "Knowledge",
+      "adoption_boundary": "Treat as a multi-stakeholder architecture and risk reference, not independent empirical proof. Adapt controls to the local system and threat model."
+    },
+    {
+      "name": "Where Security Fits in an AI Agent Stack",
+      "canonical_url": "https://developer.nvidia.com/blog/where-security-fits-in-an-ai-agent-stack/",
+      "catalog_source": "docs/RESOURCE_CATALOG_SUPPLEMENT.md",
+      "catalog_section": "Foundations, Documentation, and Case Studies",
+      "type": "Practitioner architecture guidance",
+      "maintainer_source": "NVIDIA",
+      "terms_and_status": "Publisher terms; practitioner guidance",
+      "effects": "Knowledge",
+      "adoption_boundary": "Use its authority-boundary model as design guidance; validate all controls in the deployed runtime and policy plane."
+    },
+    {
+      "name": "Incident Report: unsanctioned agent behaviour during cyber testing",
+      "canonical_url": "https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing",
+      "catalog_source": "docs/RESOURCE_CATALOG_SUPPLEMENT.md",
+      "catalog_section": "Foundations, Documentation, and Case Studies",
+      "type": "Evaluation safety case study",
+      "maintainer_source": "UK AI Security Institute",
+      "terms_and_status": "Crown copyright / site terms; published incident report",
+      "effects": "Knowledge",
+      "adoption_boundary": "Retain the report’s configuration-specific caveats. Use it to strengthen evaluation containment, monitoring, egress, and task-design safeguards."
+    },
+    {
+      "name": "The next generation of MCP",
+      "canonical_url": "https://blog.cloudflare.com/mcp-v2/",
+      "catalog_source": "docs/RESOURCE_CATALOG_SUPPLEMENT.md",
+      "catalog_section": "Foundations, Documentation, and Case Studies",
+      "type": "MCP implementation/migration article",
+      "maintainer_source": "Cloudflare",
+      "terms_and_status": "Publisher terms; vendor implementation guidance",
+      "effects": "Knowledge",
+      "adoption_boundary": "Treat as an implementation-specific migration reference; review the current official MCP specification and the actual deployed SDK."
+    },
+    {
       "name": "Orca AI Incident Archive",
       "canonical_url": "https://github.com/Continuum-AI-Corp/Orca-AI-Incident-Archive",
       "catalog_source": "docs/RESOURCE_CATALOG_SUPPLEMENT.md",
@@ -1410,6 +1672,127 @@
       "terms_and_status": "CC BY 4.0 per repository license; new project (created 2026-09-16), maintenance status not verified at review date (2026-09-24)",
       "effects": "Knowledge",
       "adoption_boundary": "Use records as contextual evidence; classifications are editorial, so check each record's linked primary sources before consequential decisions."
+    },
+    {
+      "name": "XBOW: The Road to Top 1",
+      "canonical_url": "https://xbow.com/blog/top-1-how-xbow-did-it",
+      "catalog_source": "docs/RESOURCE_CATALOG_SUPPLEMENT.md",
+      "catalog_section": "Foundations, Documentation, and Case Studies",
+      "type": "Vendor case study",
+      "maintainer_source": "XBOW",
+      "terms_and_status": "Publisher terms; reachable at 2026-10-25 review",
+      "effects": "Knowledge",
+      "adoption_boundary": "Vendor account of scaling an autonomous pentesting agent across bug-bounty programs; read as methodology, not independent verification."
+    },
+    {
+      "name": "Google Big Sleep",
+      "canonical_url": "https://projectzero.google/2024/10/from-naptime-to-big-sleep.html",
+      "catalog_source": "docs/RESOURCE_CATALOG_SUPPLEMENT.md",
+      "catalog_section": "Foundations, Documentation, and Case Studies",
+      "type": "Research case study",
+      "maintainer_source": "Google Project Zero / DeepMind",
+      "terms_and_status": "Publisher terms; reachable at 2026-10-25 review",
+      "effects": "Knowledge",
+      "adoption_boundary": "First-person account of an AI agent finding a real-world memory-safety vulnerability; retain the reported conditions and caveats."
+    },
+    {
+      "name": "Crucible",
+      "canonical_url": "https://crucible.dreadnode.io/",
+      "catalog_source": "docs/RESOURCE_CATALOG_SUPPLEMENT.md",
+      "catalog_section": "Practice Arenas and Learning Environments",
+      "type": "AI security CTF platform",
+      "maintainer_source": "Dreadnode",
+      "terms_and_status": "Site terms; reachable at 2026-10-25 review",
+      "effects": "Controlled evaluation",
+      "adoption_boundary": "Use challenges as practice material; follow platform rules and do not export techniques against unrelated systems."
+    },
+    {
+      "name": "Gandalf",
+      "canonical_url": "https://gandalf.lakera.ai/",
+      "catalog_source": "docs/RESOURCE_CATALOG_SUPPLEMENT.md",
+      "catalog_section": "Practice Arenas and Learning Environments",
+      "type": "Prompt-injection game",
+      "maintainer_source": "Lakera",
+      "terms_and_status": "Site terms; reachable at 2026-10-25 review",
+      "effects": "Knowledge",
+      "adoption_boundary": "Learning material only; constrained to the platform's chatbot."
+    },
+    {
+      "name": "Prompt Airlines",
+      "canonical_url": "https://promptairlines.com/",
+      "catalog_source": "docs/RESOURCE_CATALOG_SUPPLEMENT.md",
+      "catalog_section": "Practice Arenas and Learning Environments",
+      "type": "Gamified prompt-injection training",
+      "maintainer_source": "Dreadnode",
+      "terms_and_status": "Site terms; reachable at 2026-10-25 review",
+      "effects": "Knowledge",
+      "adoption_boundary": "Learning material within the platform's controlled environment."
+    },
+    {
+      "name": "DreadGOAD",
+      "canonical_url": "https://github.com/dreadnode/DreadGOAD",
+      "catalog_source": "docs/RESOURCE_CATALOG_SUPPLEMENT.md",
+      "catalog_section": "Practice Arenas and Learning Environments",
+      "type": "Deliberately vulnerable AD lab",
+      "maintainer_source": "Dreadnode",
+      "terms_and_status": "GPL-3.0 per repository license; active at 2026-10-25 review",
+      "effects": "Controlled execution",
+      "adoption_boundary": "Run isolated from production networks and credentials; the lab is intentionally vulnerable."
+    },
+    {
+      "name": "DEF CON AI Village",
+      "canonical_url": "https://aivillage.org/",
+      "catalog_source": "docs/RESOURCE_CATALOG_SUPPLEMENT.md",
+      "catalog_section": "Practice Arenas and Learning Environments",
+      "type": "Community and events",
+      "maintainer_source": "AI Village volunteers",
+      "terms_and_status": "Site terms; reachable at 2026-10-25 review",
+      "effects": "Knowledge",
+      "adoption_boundary": "Community material; verify each event and challenge's own rules."
+    },
+    {
+      "name": "Embrace The Red",
+      "canonical_url": "https://embracethered.com/",
+      "catalog_source": "docs/RESOURCE_CATALOG_SUPPLEMENT.md",
+      "catalog_section": "Community Voices and Continuing Coverage",
+      "type": "Research blog",
+      "maintainer_source": "Johann Rehberger",
+      "terms_and_status": "Publisher terms; reachable at 2026-10-25 review",
+      "effects": "Knowledge",
+      "adoption_boundary": "Use as practitioner research and analysis; verify claims against cited primary sources."
+    },
+    {
+      "name": "Simon Willison's Weblog",
+      "canonical_url": "https://simonwillison.net/",
+      "catalog_source": "docs/RESOURCE_CATALOG_SUPPLEMENT.md",
+      "catalog_section": "Community Voices and Continuing Coverage",
+      "type": "Research blog",
+      "maintainer_source": "Simon Willison",
+      "terms_and_status": "Publisher terms; reachable at 2026-10-25 review",
+      "effects": "Knowledge",
+      "adoption_boundary": "Use as ongoing analysis of LLM security topics; follow linked sources for decisions."
+    },
+    {
+      "name": "Dreadnode",
+      "canonical_url": "https://dreadnode.io/",
+      "catalog_source": "docs/RESOURCE_CATALOG_SUPPLEMENT.md",
+      "catalog_section": "Community Voices and Continuing Coverage",
+      "type": "Research team site",
+      "maintainer_source": "Dreadnode",
+      "terms_and_status": "Publisher terms; reachable at 2026-10-25 review",
+      "effects": "Knowledge / tooling",
+      "adoption_boundary": "Treat blog posts as practitioner reports; review each released tool on its own terms."
+    },
+    {
+      "name": "Joseph Thacker",
+      "canonical_url": "https://www.josephthacker.com/",
+      "catalog_source": "docs/RESOURCE_CATALOG_SUPPLEMENT.md",
+      "catalog_section": "Community Voices and Continuing Coverage",
+      "type": "Practitioner site",
+      "maintainer_source": "Joseph Thacker",
+      "terms_and_status": "Publisher terms; reachable at 2026-10-25 review",
+      "effects": "Knowledge",
+      "adoption_boundary": "Use as a practitioner perspective on AI-assisted security work."
     }
   ]
 }

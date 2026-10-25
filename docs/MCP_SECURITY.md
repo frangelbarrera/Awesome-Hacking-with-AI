@@ -107,7 +107,7 @@ The following patterns increase safety without sacrificing the usefulness of MCP
 
 ## 8. Evaluating Security-Workflow MCP Servers
 
-Security MCP servers deserve additional care because they may invoke scanners, parse untrusted samples, access cloud APIs, read repositories, or transmit data to intelligence providers. The [MCP Security Hub](https://github.com/FuzzingLabs/mcp-security-hub) is a useful example of a collection that documents container hardening and CI checks, but every included server still needs its own permission and dependency review.[5]
+Security MCP servers deserve additional care because they may invoke scanners, parse untrusted samples, access cloud APIs, read repositories, or transmit data to intelligence providers. The official [MCP Registry](https://registry.modelcontextprotocol.io/) is the canonical discovery channel, and community collections can document container hardening and CI checks, but every included server still needs its own permission and dependency review.[5]
 
 Use a versioned verification baseline as well as a threat checklist. OWASP AISVS provides testable controls spanning agentic security and MCP security; select a level appropriate to the system and record the exact requirement version used as evidence.[6] For adversarial evaluation of an MCP-connected agent, [MCP Security Bench](https://github.com/dongsenzhang/MSB) offers a research harness that measures both task performance and resilience across the tool-use lifecycle. Treat its scenarios as controlled evaluation material, not production testing instructions.[7]
 
@@ -146,6 +146,6 @@ Use this checklist whenever an MCP server is proposed for a security workflow.
 [2]: https://owasp.org/www-project-mcp-top-10/ "OWASP MCP Top 10"
 [3]: https://modelcontextprotocol.io/docs/2026-07-28/tutorials/security/security_best_practices "MCP Security Best Practices"
 [4]: https://blog.cloudflare.com/mcp-v2/ "The next generation of MCP"
-[5]: https://github.com/FuzzingLabs/mcp-security-hub "MCP Security Hub"
+[5]: https://registry.modelcontextprotocol.io/ "MCP Registry"
 [6]: https://github.com/OWASP/AISVS "OWASP AI Security Verification Standard"
 [7]: https://proceedings.iclr.cc/paper_files/paper/2026/hash/5fc47800ee5b30b8777fdd30abcaaf3b-Abstract-Conference.html "MCP Security Bench"

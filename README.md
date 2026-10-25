@@ -44,8 +44,10 @@ For coordinated disclosure guidance, consult the [OWASP Vulnerability Disclosure
   - [Threat Intelligence and Security Operations](#threat-intelligence-and-security-operations)
 - [Models, Data, and Adaptation](#models-data-and-adaptation)
 - [Benchmarks, Cyber Ranges, and Evaluation](#benchmarks-cyber-ranges-and-evaluation)
+- [Practice Arenas, CTFs, and Learning Labs](#practice-arenas-ctfs-and-learning-labs)
 - [MCP Servers for Security Workflows](#mcp-servers-for-security-workflows)
 - [Research and Architecture Case Studies](#research-and-architecture-case-studies)
+- [Community Voices and Continuing Coverage](#community-voices-and-continuing-coverage)
 - [Learning Path](#learning-path)
 - [Extended Guides](#extended-guides)
 - [Contributing and Curation](#contributing-and-curation)
@@ -61,6 +63,7 @@ The collection follows two complementary paths. **AI for security** concerns how
 | Specialize a model for a security task | [Models, Data, and Adaptation](#models-data-and-adaptation) | [Models, Data, and Evaluation Guide](docs/MODELS_DATA_AND_EVALUATION.md) |
 | Build an approved MCP workflow | [MCP Security](#mcp-security) | [MCP server directory](#mcp-servers-for-security-workflows) and [MCP Security Guide](docs/MCP_SECURITY.md) |
 | Learn systematically | [Learning Path](#learning-path) | Foundations, extended guides, benchmarks, and labs |
+| Practice AI-security skills safely | [Practice Arenas, CTFs, and Learning Labs](#practice-arenas-ctfs-and-learning-labs) | [Benchmarks](#benchmarks-cyber-ranges-and-evaluation) and the [Agentic Security Guide](docs/AGENTIC_SECURITY_GUIDE.md) |
 
 ## Foundations, Governance, and Threat Taxonomies
 
@@ -69,7 +72,7 @@ Security work involving AI benefits from a shared vocabulary, a lifecycle view, 
 | Resource | Type | Why it matters |
 |---|---|---|
 | [OWASP GenAI LLM Top 10](https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/) | Guidance | Current OWASP guidance for LLM and generative AI application risks; the former site is maintained as a historical entry point.[1] |
-| [OWASP AI Security and Privacy Guide](https://owasp.org/www-project-ai-security-and-privacy-guide/) | Guidance | Broad security and privacy reference for AI-system design, deployment, and operation. |
+| [OWASP AI Exchange](https://owaspai.org/) | Guidance | Security and privacy reference for AI systems — threat models, controls, and testing guidance; maintained as the successor to the OWASP AI Security and Privacy Guide. |
 | [NIST AI RMF](https://airc.nist.gov/airmf-resources/) | Framework | Voluntary framework organized around **Govern**, **Map**, **Measure**, and **Manage**.[2] |
 | [NCSC Secure AI System Development](https://www.ncsc.gov.uk/collection/guidelines-secure-ai-system-development) | Lifecycle guidance | Secure design, development, deployment, and operation/maintenance for AI systems.[3] |
 | [OWASP AI Security Verification Standard (AISVS)](https://github.com/OWASP/AISVS) | Verification standard | Versioned, testable security requirements across data, models, infrastructure, identities, agents, MCP, adversarial robustness, and monitoring.[20] |
@@ -97,6 +100,7 @@ An AI application is more than a model. Prompts, retrieval sources, vector store
 | [Open Prompt Injection](https://github.com/liu00222/Open-Prompt-Injection) | Benchmark | Benchmark resources for studying prompt injection and defenses. |
 | [Agentic Radar](https://github.com/splx-ai/agentic-radar) | Agent security | CLI scanner for issues in agentic workflows. |
 | [NVIDIA SkillSpector](https://github.com/NVIDIA/SkillSpector) | Skill and extension security | Scanner for agent skills and related supply-chain, permission, prompt-injection, and data-flow risks. Treat optional model-assisted analysis as an explicit data-handling decision.[21] |
+| [Skill Scanner](https://github.com/cisco-ai-defense/skill-scanner) | Skills security | Cisco AI Defense scanner for agent-skill packages covering supply-chain and injection risks before installation; complements SkillSpector in pre-install review. |
 | [Agent Threat Rules](https://github.com/Agent-Threat-Rule/agent-threat-rules) | Detection-rule format | Machine-readable agent-threat detection rules and reference implementations. The upstream format is a working draft; assess maturity and test coverage before enforcement.[22] |
 | [OWASP Agent Memory Guard](https://github.com/OWASP/www-project-agent-memory-guard) | Memory security | OWASP project for detecting and preventing agent memory poisoning. |
 | [Semgrep AI Best Practices](https://github.com/semgrep/ai-best-practices) | Secure development | Security rules for code integrating LLM providers, MCP, assistants, and agent frameworks. |
@@ -128,10 +132,10 @@ AI red teaming is disciplined testing of models and AI applications under define
 
 | Resource | Focus | Description |
 |---|---|---|
-| [Adversarial Robustness Toolbox](https://github.com/Trusted-AI/adversarial-robustness-toolbox) | Classical ML | IBM library for adversarial ML attacks, defenses, and robustness evaluation. |
+| [Adversarial Robustness Toolbox](https://github.com/Trusted-AI/adversarial-robustness-toolbox) | Classical ML | Adversarial-ML library (Linux Foundation AI & Data) for attacks, defenses, and robustness evaluation. |
 | [Counterfit](https://github.com/Azure/counterfit) | Classical ML | Automation layer for assessing security risks in ML systems. |
-| [CleverHans](https://github.com/cleverhans-lab/cleverhans) | Classical ML | Library for adversarial examples and defense benchmarking. |
-| [Foolbox](https://github.com/bethgelab/foolbox) | Classical ML | Robustness-evaluation toolbox across common ML frameworks. |
+| [CleverHans](https://github.com/cleverhans-lab/cleverhans) | Classical ML | Historical library for adversarial examples and defense benchmarking; largely inactive upstream; retain as research context. |
+| [Foolbox](https://github.com/bethgelab/foolbox) | Classical ML | Robustness-evaluation toolbox across common ML frameworks; limited recent upstream activity. |
 | [TextAttack](https://github.com/QData/TextAttack) | NLP robustness | Framework for adversarial NLP testing, augmentation, and training. |
 | [AI Red Teaming Playground Labs](https://github.com/microsoft/AI-Red-Teaming-Playground-Labs) | Training | Learning materials and labs for AI red teaming. |
 | [RAMPART](https://github.com/microsoft/RAMPART) | Agentic AI testing | Pytest-native framework for safety and security testing of agentic applications. |
@@ -163,6 +167,12 @@ The AIxCC final reported 54 synthetic vulnerabilities found out of 63 and 43 pat
 
 There is no universal “best” security agent. Capability depends on task, target access, permitted tools, scaffold, model, evaluation protocol, and human oversight. The directory therefore groups resources by role and avoids global performance claims without comparable evidence.
 
+<p align="center">
+  <img src="assets/images/autonomous_hacking_flow.png" alt="Simplified workflow of an autonomous security-testing agent: goal definition, reconnaissance and OSINT, vulnerability scanning, exploit development, exploitation, post-exploitation, and reporting stages, with decision points between them" width="480">
+</p>
+
+*Simplified reference flow. Authorized scope, independent validation, evidence handling, and human approval gates are covered in the [Agentic Security Guide](docs/AGENTIC_SECURITY_GUIDE.md).*
+
 | Resource | Role | Curation note |
 |---|---|---|
 | [PentAGI](https://github.com/vxcontrol/pentagi) | Authorized pentesting agent | Multi-agent system for complex security testing with sandboxing, multiple providers, knowledge-graph integrations, and observability. Review current permissions and deployment boundaries. |
@@ -171,9 +181,20 @@ There is no universal “best” security agent. Capability depends on task, tar
 | [Shannon](https://github.com/KeygraphHQ/shannon) | Web and API security | Autonomous application-security project; assess any performance claim in its stated test setting. |
 | [Strix](https://github.com/usestrix/strix) | Application security | Agents for dynamic code analysis and validation. |
 | [Zen-AI-Pentest](https://github.com/SHAdd0WTAka/Zen-Ai-Pentest) | Framework | Multi-agent security testing framework; its tool integrations are privileged operations. |
-| [CyberStrikeAI](https://github.com/Ed1s0nZ/CyberStrikeAI) | Platform | AI-native tool orchestration, roles, and lifecycle management. |
+| [CyberStrikeAI](https://github.com/AIPentest/CyberStrikeAI) | Platform | AI-native tool orchestration, roles, and lifecycle management. |
 | [BugTraceAI](https://github.com/BugTraceAI/BugTraceAI) | Authorized security agent | Active Apache-2.0 open-source platform maintained by BugTraceAI for authorized security testing with multi-agent orchestration, independent validation, evidence capture, and reporting. Review tool permissions, scope, and isolation before use. |
 | [OpenHack](https://github.com/openhackai/OpenHack) | Code security | Multi-agent source-code scanner and validation system. |
+| [HexStrike AI](https://github.com/0x4m4/hexstrike-ai) | MCP toolkit for authorized testing | MCP server that exposes a broad catalog of offensive security tools to AI agents. Every tool invocation is privileged execution, so restrict it to an approved lab with an explicit tool allowlist. |
+| [Decepticon](https://github.com/BitterSecurity/Decepticon) | Red-team agent | Autonomous agent for red-team workflows. Execution and network effects require explicit authorization, isolation, and approval gates. |
+| [Darkmoon](https://github.com/ASCIT31/Dark-Moon) | Autonomous pentesting framework | Open-source multi-agent platform with specialist agents for web, API, cloud, and Active Directory testing. GPL-3.0; review permissions and isolation before any authorized engagement. |
+| [Nebula](https://github.com/berylliumsec/nebula) | Pentesting harness | Security harness that pairs LLM reasoning with assessment tooling for guided workflows. Use against authorized targets and validate every finding independently. |
+| [VulnClaw](https://github.com/Netw0rkNoob/VulnClaw) | Vulnerability research agent | Agent-and-MCP pipeline that chains reconnaissance, vulnerability discovery, exploitation, and reporting stages. Run only in isolated labs with a defined scope. |
+| [PentestAgent](https://github.com/GH05TCREW/pentestagent) | Black-box testing framework | AI agent framework for black-box security testing across bug bounty, red-team, and pentest workflows. Its tool integrations are privileged operations. |
+| [Pentest Swarm AI](https://github.com/Armur-Ai/Pentest-Swarm-AI) | Agent swarm | Swarm orchestration of reconnaissance, classification, and exploitation agents. AGPL-3.0; constrain autonomy and verify results before reporting. |
+| [Pentest AI Agents](https://github.com/0xSteph/pentest-ai-agents) | Coding-agent subagents | Specialized Claude Code subagents for authorized offensive security research; useful for studying agent decomposition in a familiar coding-agent scaffold. |
+| [CTF Skills](https://github.com/ljagiello/ctf-skills) | Agent skill collection | Agent skills for CTF solving across web, binary exploitation, cryptography, reversing, and forensics; a practical on-ramp for agent-driven workflows in legal practice environments. |
+| [HackSynth](https://github.com/aielte-research/HackSynth) | Research agent and benchmark | LLM agent and evaluation framework for autonomous pentesting with an associated empirical study. Research artifact with limited recent upstream activity. |
+| [Open ReverseLab](https://github.com/LING71671/open-reverselab) | Reverse-engineering platform | Open-source reverse-engineering agent platform and MCP server for Ghidra, Frida, x64dbg, and Rizin. Analyze authorized samples in isolation. |
 | [CAI — archived](https://github.com/aliasrobotics/cai) | Historical artifact | The project reports that it is archived and will receive no further fixes or security patches; retain as research context, not an active dependency. |
 | [BoxPwnr](https://github.com/0ca/BoxPwnr) | Lab agent | Agent resources for controlled security challenges. |
 | [NYU CTF Agents](https://github.com/NYU-LLM-CTF/nyuctf_agents) | Research agents | Agents associated with scalable CTF evaluation research. |
@@ -206,7 +227,7 @@ Model specialization is not synonymous with training a model from scratch. **RAG
 |---|---|---|
 | [Primus](https://arxiv.org/abs/2502.11191) | Paper, datasets, models | Cybersecurity resources spanning pretraining, instruction tuning, and reasoning distillation, with ablations and benchmark evaluation.[13] |
 | [Trend Micro Primus Collection](https://huggingface.co/collections/trendmicro-ailab/primus) | Models and data | Canonical collection referenced by the Primus paper. |
-| [Foundation-Sec](https://huggingface.co/fdtn-ai/Foundation-Sec-8B) | Specialized model | Cybersecurity-focused foundation model family; inspect model card, terms, data, and evaluation. |
+| [Foundation-Sec](https://huggingface.co/fdtn-ai/Foundation-Sec-8B) | Specialized model | Cybersecurity-adapted 8B base model built on Llama 3; review the model card, and note that task use requires further instruction tuning. |
 | [Antares Collection](https://huggingface.co/collections/fdtn-ai/antares) | Specialized models | Security-oriented models for vulnerability-localization workflows. |
 | [SecureBERT](https://huggingface.co/ehsanaghaei/SecureBERT) | Specialized model | BERT-family model for cybersecurity text tasks. |
 | [Llama-Primus](https://huggingface.co/trendmicro-ailab/Llama-Primus-Base) | Specialized model | Cybersecurity model family associated with the Primus work. |
@@ -238,6 +259,21 @@ A benchmark score is meaningful only when task, model, agent scaffold, tools, en
 | [BotsBench](https://botsbench.com/) | SOC investigation | Evaluation of agents on security-operations investigation tasks. |
 | [DefenseBench](https://defensebench.ai/) | Defensive agents | Evaluation of agents on defensive cybersecurity operations. |
 
+## Practice Arenas, CTFs, and Learning Labs
+
+Legal practice environments are a safe way to build offensive and defensive AI-security skills. Each arena, challenge platform, and lab below is designed for learning and stays inside its own authorization boundary; none of them extends permission to any system outside its stated scope. Treat every exercise environment as disposable and keep production data and credentials out of it.
+
+| Resource | Format | Description |
+|---|---|---|
+| [Crucible](https://crucible.dreadnode.io/) | AI security CTF platform | Challenge platform from Dreadnode covering prompt injection, agent abuse, and AI-exploitation tasks with public leaderboards. |
+| [Gandalf](https://gandalf.lakera.ai/) | Prompt-injection game | Guided levels that teach prompt-injection offense and defense against a deliberately constrained chatbot. |
+| [Prompt Airlines](https://promptairlines.com/) | Gamified training | Scenario-based game from Dreadnode for practicing prompt-injection techniques in a controlled setting. |
+| [DreadGOAD](https://github.com/dreadnode/DreadGOAD) | Deliberately vulnerable lab | Active Directory lab configuration purpose-built for evaluating AI agents against a realistic corporate attack surface. |
+| [Damn Vulnerable MCP Server](https://github.com/harishsg993010/damn-vulnerable-MCP-server) | Training lab | Intentionally vulnerable MCP implementation for studying MCP-specific weaknesses in a disposable environment. |
+| [Vulnerable MCP Servers Lab](https://github.com/appsecco/vulnerable-mcp-servers-lab) | Training labs | Collection of deliberately vulnerable MCP servers for guided security learning from Appsecco. |
+| [Damn Vulnerable LLM Agent](https://github.com/ReversecLabs/damn-vulnerable-llm-agent) | Training lab | Deliberately vulnerable LLM agent from Reversec for exploring agentic attack paths safely. |
+| [DEF CON AI Village](https://aivillage.org/) | Community and events | Volunteer group behind the DEF CON AI Village and its AI CTF; talks, challenges, and community links for AI-security practitioners. |
+
 ## MCP Servers for Security Workflows
 
 These are not plug-and-play endorsements. Prefer read-only access, minimal scopes, isolated environments, visible tool calls, and explicit human approval before any action that changes a system or sends traffic outside a lab.
@@ -245,7 +281,7 @@ These are not plug-and-play endorsements. Prefer read-only access, minimal scope
 | Server or collection | Area | Notes |
 |---|---|---|
 | [PortSwigger Burp Suite MCP Server](https://github.com/PortSwigger/mcp-server) | Application security | Official integration between Burp Suite and MCP clients; constrain any configuration-changing capabilities. |
-| [MCP Security Hub](https://github.com/FuzzingLabs/mcp-security-hub) | Tool collection | Dockerized collection; its documentation describes non-root containers, dropped capabilities, limits, health checks, and CI scanning. Inspect each server individually.[18] |
+| [MCP Registry](https://registry.modelcontextprotocol.io/) | Discovery | Official registry for discovering MCP servers. Treat each listed server as untrusted until its provenance, permissions, and effects are reviewed. |
 | [mcp-for-security](https://github.com/cyproxio/mcp-for-security) | Community collection | Independently verify each upstream, package, and permission boundary. |
 | [OpenCTI MCP Server](https://github.com/CooperCyberCoffee/opencti_mcp_server) | Threat intelligence | Begin with a read-only service identity and audit access to intelligence data. |
 | [Wazuh MCP Server](https://github.com/gensecaihq/Wazuh-MCP-Server) | SOC operations | Separate telemetry queries from response or configuration capabilities. |
@@ -254,6 +290,13 @@ These are not plug-and-play endorsements. Prefer read-only access, minimal scope
 | [radare2 MCP](https://github.com/radareorg/radare2-mcp) | Binary analysis | Use isolated sample handling and read-only mounts. |
 | [VirusTotal MCP](https://github.com/w0h1v/mcp-virustotal) | Threat intelligence | Protect API credentials and comply with data-sharing terms. |
 | [MCP Servers](https://github.com/modelcontextprotocol/servers) | Discovery | Official project collection and references; apply the same review to every server. |
+| [GhidraMCP](https://github.com/LaurieWired/GhidraMCP) | Reverse engineering | Bridges Ghidra with language models for assisted decompilation and annotation. Analyze authorized binaries with isolated, read-only sample mounts. |
+| [IDA Pro MCP](https://github.com/mrexodia/ida-pro-mcp) | Reverse engineering | Bridges IDA Pro with language models for AI-assisted reverse engineering. Use with authorized samples only. |
+| [Reverse Engineering Assistant](https://github.com/cyberkaida/reverse-engineering-assistant) | Reverse engineering | MCP server for Ghidra-centric reverse-engineering workflows with assistant-driven analysis. Run against authorized samples in isolation. |
+| [Wireshark MCP](https://github.com/bx33661/Wireshark-MCP) | Traffic analysis | Lets an AI assistant analyze packet captures in natural language; keep captures inside authorized analysis environments. |
+| [MetasploitMCP](https://github.com/GH05TCREW/MetasploitMCP) | Exploitation framework | MCP access to Metasploit operations. Every module invocation is a privileged action; restrict to dedicated labs with explicit approval. |
+| [Shodan MCP](https://github.com/w0h1v/mcp-shodan) | Attack-surface search | Queries Shodan for internet-connected devices, DNS context, and CVE information. External queries only; respect provider terms and API limits. |
+| [CVE MCP Server](https://github.com/mukul975/cve-mcp-server) | Vulnerability intelligence | Aggregates CVE, EPSS (Exploit Prediction Scoring System), and related vulnerability-intelligence APIs behind one MCP interface. Review upstream API terms before use. |
 
 ## Research and Architecture Case Studies
 
@@ -270,18 +313,31 @@ Case studies are useful when read for design choices and stated limitations, not
 | [Theori RoboDuck](https://theori.io/blog/aixcc-and-roboduck-63447) | AIxCC | Finalist retrospective and resources. |
 | [Agent security stack design](https://developer.nvidia.com/blog/where-security-fits-in-an-ai-agent-stack/) | Practitioner guidance | Separate behavioral guidance from the runtime control plane: the agent proposes actions, while identity, policy, egress, and audit controls enforce allowed effects.[28] |
 | [AISI cyber-evaluation incident report](https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing) | Safety case study | A controlled-evaluation incident that reinforces explicit egress decisions, real-time monitoring, solvable task scope, and containment that does not depend on model behavior.[29] |
+| [XBOW: The Road to Top 1](https://xbow.com/blog/top-1-how-xbow-did-it) | Autonomous bug bounty | Vendor case study on scaling an autonomous penetration-testing agent across public bug-bounty programs. Read it for methodology, target scoping, and precision handling; it is a vendor account, not independent verification. |
+| [Google Big Sleep](https://projectzero.google/2024/10/from-naptime-to-big-sleep.html) | AI-assisted vulnerability research | Project Zero and DeepMind report what they believe is the first public example of an AI agent finding a previously unknown exploitable memory-safety vulnerability in real-world software, fixed in SQLite before release. First-person research account; the lesson is that pre-release variant analysis can reach bugs that fuzzing misses. |
+
+## Community Voices and Continuing Coverage
+
+The AI-security field moves faster than any curated list. These practitioner-maintained sources track new attacks, defenses, incident write-ups, and research between formal publications, and they complement the evidence standards used throughout this repository.
+
+| Resource | Focus |
+|---|---|
+| [Embrace The Red](https://embracethered.com/) | Johann Rehberger's research blog on prompt injection, agentic attacks, and exfiltration techniques, with reproducible experiments. |
+| [Simon Willison's Weblog](https://simonwillison.net/) | Continuing analysis of LLM security incidents, prompt-injection research, and tool-use risks. |
+| [Dreadnode](https://dreadnode.io/) | Security-for-AI research team behind Crucible and open offensive tooling; blog, releases, and training material. |
+| [Joseph Thacker](https://www.josephthacker.com/) | Bug hunter and AI-security practitioner sharing research, tooling, and conference talks on AI-assisted offense. |
 
 ## Learning Path
 
 | Stage | Focus | Suggested starting resources | Outcome |
 |---|---|---|---|
-| 1. Foundations | Application security, ML concepts, threat modeling | OWASP, NIST, NCSC, ATT&CK/ATLAS | Vocabulary for risks, assets, controls, and evidence. |
-| 2. Secure AI applications | LLM, RAG, prompts, tools, and data flows | OWASP GenAI, Promptfoo, Garak, PyRIT | A test plan for an AI application and integrations. |
-| 3. Agents and MCP | Permissions, memory, tools, isolation, logs | MCP specification, MCP guidance, OWASP MCP | A least-privilege architecture and review checklist. |
-| 4. AI-assisted AppSec | Code analysis, fuzzing, validation, remediation | Semgrep, CodeQL, OSS-Fuzz, AIxCC | Reproducible, reviewable findings. |
-| 5. Adaptation | RAG, SFT, PEFT, domain adaptation, safety | Primus, Foundation-Sec, DAP research | A documented retrieval-versus-tuning decision. |
-| 6. Evaluation | Benchmarks, ranges, cost, failure analysis | CyBench, CyberGym, VLoc Bench | An evaluation plan with limitations. |
-| 7. Operations | Monitoring, governance, disclosure, maintenance | NIST, NCSC, OWASP | An auditable program rather than a demo. |
+| 1. Foundations | Application security, ML concepts, threat modeling | [OWASP](https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/), [NIST](https://airc.nist.gov/airmf-resources/), [NCSC](https://www.ncsc.gov.uk/collection/guidelines-secure-ai-system-development), [ATT&CK](https://attack.mitre.org/)/[ATLAS](https://atlas.mitre.org/) | Vocabulary for risks, assets, controls, and evidence. |
+| 2. Secure AI applications | LLM, RAG, prompts, tools, and data flows | [OWASP GenAI](https://genai.owasp.org/), [Promptfoo](https://github.com/promptfoo/promptfoo), [Garak](https://github.com/NVIDIA/garak), [PyRIT](https://github.com/Azure/PyRIT), [Crucible](https://crucible.dreadnode.io/), [Gandalf](https://gandalf.lakera.ai/) | A test plan for an AI application and integrations, tested in legal practice environments. |
+| 3. Agents and MCP | Permissions, memory, tools, isolation, logs | [MCP specification](https://modelcontextprotocol.io/specification/2026-07-28), [MCP guidance](https://modelcontextprotocol.io/docs/2026-07-28/tutorials/security/security_best_practices), [OWASP MCP](https://owasp.org/www-project-mcp-top-10/) | A least-privilege architecture and review checklist. |
+| 4. AI-assisted AppSec | Code analysis, fuzzing, validation, remediation | [Semgrep](https://github.com/semgrep/semgrep), [CodeQL](https://github.com/github/codeql), [OSS-Fuzz](https://github.com/google/oss-fuzz), [AIxCC](https://aicyberchallenge.com/) | Reproducible, reviewable findings. |
+| 5. Adaptation | RAG, SFT, PEFT, domain adaptation, safety | [Primus](https://arxiv.org/abs/2502.11191), [Foundation-Sec](https://huggingface.co/fdtn-ai/Foundation-Sec-8B), [DAP research](https://arxiv.org/html/2507.02964v1) | A documented retrieval-versus-tuning decision. |
+| 6. Evaluation | Benchmarks, ranges, cost, failure analysis | [CyBench](https://cybench.github.io/), [CyberGym](https://arxiv.org/abs/2506.02548), [VLoc Bench](https://github.com/cisco-foundation-ai/vulnerability-localization-benchmark) | An evaluation plan with limitations. |
+| 7. Operations | Monitoring, governance, disclosure, maintenance | [NIST](https://airc.nist.gov/airmf-resources/), [NCSC](https://www.ncsc.gov.uk/collection/guidelines-secure-ai-system-development), [OWASP](https://genai.owasp.org/) | An auditable program rather than a demo. |
 
 ## Extended Guides
 
@@ -311,7 +367,7 @@ Every proposed entry should include a canonical URL, resource type, neutral desc
 [2]: https://airc.nist.gov/airmf-resources/ "NIST AI Risk Management Framework"
 [3]: https://www.ncsc.gov.uk/collection/guidelines-secure-ai-system-development "NCSC Secure AI System Development"
 [4]: https://atlas.mitre.org/ "MITRE ATLAS"
-[5]: https://modelcontextprotocol.io/specification/2025-06-18 "MCP Specification"
+[5]: https://modelcontextprotocol.io/specification/2026-07-28 "MCP Specification"
 [6]: https://modelcontextprotocol.io/docs/2026-07-28/tutorials/security/security_best_practices "MCP Security Best Practices"
 [7]: https://owasp.org/www-project-mcp-top-10/ "OWASP MCP Top 10"
 [8]: https://genai.owasp.org/resource/cheatsheet-a-practical-guide-for-securely-using-third-party-mcp-servers-1-0/ "OWASP Third-Party MCP Guide"
@@ -324,7 +380,6 @@ Every proposed entry should include a canonical URL, resource type, neutral desc
 [15]: https://cybench.github.io/ "CyBench"
 [16]: https://arxiv.org/abs/2506.02548 "CyberGym"
 [17]: https://www.wiz.io/blog/introducing-ai-cyber-model-arena-a-real-world-benchmark-for-ai-agents-in-cybersec "Wiz AI Cyber Model Arena"
-[18]: https://github.com/FuzzingLabs/mcp-security-hub "MCP Security Hub"
 [19]: https://www.praetorian.com/blog/how-ai-agents-automate-cve-vulnerability-research/ "Praetorian CVE Researcher"
 [20]: https://github.com/OWASP/AISVS "OWASP AI Security Verification Standard"
 [21]: https://github.com/NVIDIA/SkillSpector "NVIDIA SkillSpector"
