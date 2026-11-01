@@ -123,6 +123,7 @@ The Model Context Protocol (MCP) standardizes how hosts, clients, and servers ex
 | [Awesome MCP Security](https://github.com/Puliczek/awesome-mcp-security) | Curated list | Complementary directory of MCP-security resources, tools, research, and guides. |
 | [Agent Scan (formerly mcp-scan)](https://github.com/snyk/agent-scan) | Security scanner | Tooling for inspecting MCP server exposures before adoption. |
 | [Cisco MCP Scanner](https://github.com/cisco-ai-defense/mcp-scanner) | Security scanner | Multi-engine scanner for MCP servers and tools. |
+| [HOL Guard](https://github.com/hashgraph-online/hol-guard) | Open-source agent security tool | HOL-maintained Apache-2.0 software for scanning supported agent components and applying allow, block, or approval policies to covered MCP tool calls. Coverage depends on supported integration hooks, not all MCP activity. |
 
 Before connecting a server, establish source provenance, transport, identities, requested scopes, filesystem and network access, whether it can read/write/execute, logging behavior, dependency posture, and approval steps for consequential actions. See the [MCP Security Guide](docs/MCP_SECURITY.md).
 
