@@ -297,6 +297,7 @@ These are not plug-and-play endorsements. Prefer read-only access, minimal scope
 | [MetasploitMCP](https://github.com/GH05TCREW/MetasploitMCP) | Exploitation framework | MCP access to Metasploit operations. Every module invocation is a privileged action; restrict to dedicated labs with explicit approval. |
 | [Shodan MCP](https://github.com/w0h1v/mcp-shodan) | Attack-surface search | Queries Shodan for internet-connected devices, DNS context, and CVE information. External queries only; respect provider terms and API limits. |
 | [CVE MCP Server](https://github.com/mukul975/cve-mcp-server) | Vulnerability intelligence | Aggregates CVE, EPSS (Exploit Prediction Scoring System), and related vulnerability-intelligence APIs behind one MCP interface. Review upstream API terms before use. |
+| [ICHI MCP Server](https://github.com/bernik-bot/ichi-mcp) | Threat intelligence | Read-only server for the Internet Cyber Health Index (ichi.global): exposes current internet-wide threat-condition band (NORMAL through CRITICAL), score, contributing dimensions, recent critical vulnerability advisories, and upstream feed health. Keyless and CORS-open; community-maintained for ICHI's creator. |
 
 ## Research and Architecture Case Studies
 
