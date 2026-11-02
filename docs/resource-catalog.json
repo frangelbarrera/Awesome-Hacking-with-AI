@@ -4,7 +4,7 @@
     "docs/RESOURCE_CATALOG.md",
     "docs/RESOURCE_CATALOG_SUPPLEMENT.md"
   ],
-  "entry_count": 154,
+  "entry_count": 155,
   "entries": [
     {
       "name": "OWASP GenAI LLM Top 10",
@@ -1375,6 +1375,17 @@
       "terms_and_status": "Apache-2.0 per repository license; active at 2026-10-25 review",
       "effects": "External query",
       "adoption_boundary": "Review upstream API terms; do not submit sensitive data to third-party intelligence services."
+    },
+    {
+      "name": "npmscan",
+      "canonical_url": "https://github.com/salemalem/npmscan-mcp-plugin",
+      "catalog_source": "docs/RESOURCE_CATALOG_SUPPLEMENT.md",
+      "catalog_section": "Additional MCP Discovery and Review Resources",
+      "type": "npm supply-chain MCP server and agent plugin",
+      "maintainer_source": "salemalem / npmscan",
+      "terms_and_status": "Plugin MIT per repository license; hosted server is not open source; active at 2026-11-02 review",
+      "effects": "External query",
+      "adoption_boundary": "Read-only: sends package names, versions, and manifest or lockfile contents to npmscan.com; no credentials required. Treat findings as advisory and have a person approve any dependency removal or upgrade."
     },
     {
       "name": "MCP Registry",
