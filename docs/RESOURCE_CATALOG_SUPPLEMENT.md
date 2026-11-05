@@ -22,6 +22,7 @@ This supplement completes the metadata layer for the discovery resources in the 
 | [AI Red Teaming Playground Labs](https://github.com/microsoft/AI-Red-Teaming-Playground-Labs) | Training labs | Microsoft | License and current status not verified at review date | Controlled evaluation | Run lab content in a segregated learning environment. |
 | [AI-Infra-Guard](https://github.com/Tencent/AI-Infra-Guard) | AI-security platform | Tencent | License and current status not verified at review date | Read / external query, configuration-dependent | Review modules, credentials, egress, and tool effects before enabling any component. |
 | [Skill Scanner](https://github.com/cisco-ai-defense/skill-scanner) | Agent-skills security scanner | Cisco AI Defense | Repository license terms to review; active at 2026-10-25 review | Read / local analysis | Scan skill packages before installation; validate findings and control any uploaded data. |
+| [whatileaked](https://github.com/selan-ai/whatileaked) | Agent-transcript secret scanner | Selan (selan-ai) | MIT license (repository LICENSE); active at 2026-11-05 review | Read / local analysis; optional `wipe` rewrites local transcript and instruction files only after the user types `wipe` | Run on your own workstation; it makes no network requests. Treat every finding as already exposed to the model provider and rotate it; review findings before redacting. |
 
 ## Application Security, Code Analysis, and Vulnerability Research
 
