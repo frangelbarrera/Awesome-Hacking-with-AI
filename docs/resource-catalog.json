@@ -42,7 +42,7 @@
       "terms": "Crown copyright / site terms",
       "status": "Published guidance",
       "effects": "Knowledge",
-      "adoption_boundary": "Adapt controls to the organization’s legal and operational context.",
+      "adoption_boundary": "Adapt controls to the organization\u2019s legal and operational context.",
       "evidence": "[Official collection](https://www.ncsc.gov.uk/collection/guidelines-secure-ai-system-development)"
     },
     {
@@ -367,7 +367,7 @@
       "terms": "Review paper, model cards, and dataset terms",
       "status": "Research resource",
       "effects": "Knowledge / local inference",
-      "adoption_boundary": "Evaluate the exact model/data asset independently; the paper’s findings are not a blanket deployment claim.",
+      "adoption_boundary": "Evaluate the exact model/data asset independently; the paper\u2019s findings are not a blanket deployment claim.",
       "evidence": "[Paper](https://arxiv.org/abs/2502.11191)"
     },
     {
@@ -471,7 +471,7 @@
       "terms": "Repository / paper terms",
       "status": "Research benchmark",
       "effects": "Controlled execution",
-      "adoption_boundary": "Report guided/unguided setting, version, attempts, tools, and the project’s evaluation-leak caveat.",
+      "adoption_boundary": "Report guided/unguided setting, version, attempts, tools, and the project\u2019s evaluation-leak caveat.",
       "evidence": "[Benchmark site](https://cybench.github.io/)"
     },
     {
@@ -484,7 +484,7 @@
       "terms": "Paper / code terms",
       "status": "Research benchmark",
       "effects": "Controlled execution",
-      "adoption_boundary": "Preserve the paper’s real-world task context and do not overgeneralize results.",
+      "adoption_boundary": "Preserve the paper\u2019s real-world task context and do not overgeneralize results.",
       "evidence": "[Paper](https://arxiv.org/abs/2506.02548)"
     },
     {
@@ -519,7 +519,7 @@
       "catalog_source": "docs/RESOURCE_CATALOG.md",
       "catalog_section": "Benchmarks and Controlled Environments",
       "type": "Agent-security benchmark",
-      "maintainer_source": "ETH Zürich / project authors",
+      "maintainer_source": "ETH Z\u00fcrich / project authors",
       "terms": "MIT",
       "status": "Research benchmark; API under development",
       "effects": "Controlled evaluation",
@@ -912,7 +912,7 @@
       "maintainer_source": "NVISO",
       "terms_and_status": "License and current status not verified at review date",
       "effects": "Read / external query, configuration-dependent",
-      "adoption_boundary": "Treat as design examples; assess each integration’s data and permissions before use."
+      "adoption_boundary": "Treat as design examples; assess each integration\u2019s data and permissions before use."
     },
     {
       "name": "HexStrike AI",
@@ -1382,10 +1382,12 @@
       "catalog_source": "docs/RESOURCE_CATALOG_SUPPLEMENT.md",
       "catalog_section": "Additional MCP Discovery and Review Resources",
       "type": "Threat-intelligence MCP server",
-      "maintainer_source": "bernik-bot / Joe Bernik",
-      "terms_and_status": "MIT per repository license; active at 2026-11-02 review",
-      "effects": "External query (read-only; keyless API)",
-      "adoption_boundary": "Exposes the internet-wide cyber-health band, score, dimensions, and critical advisory feed from ichi.global. Read-only, no credentials required. Apply the same classification review as any third-party intelligence source."
+      "maintainer_source": "bernik-bot / Joe Bernik (community-maintained for ICHI's creator)",
+      "terms": "MIT",
+      "status": "Active at review time (2026-11-08)",
+      "effects": "External query (read-only; GET requests only; no user data or credentials required or transmitted)",
+      "adoption_boundary": "Calls are keyless GET requests to public ichi.global endpoints; the server receives no user data, environment context, or credentials. The returned band and 0\u2013100 score are directional outside-in signals reflecting internet-wide conditions, not organization-specific risk assessments. Apply standard classification review for any third-party intelligence source before incorporating the signal into automated workflows.",
+      "evidence": "[Project repository](https://github.com/bernik-bot/ichi-mcp) \u00b7 [Live API endpoint](https://ichi.global/api/current-index) \u00b7 [Methodology](https://ichi.global/methodology)"
     },
     {
       "name": "MCP Registry",
@@ -1418,7 +1420,7 @@
       "maintainer_source": "U.S. NIST",
       "terms_and_status": "U.S. government publication terms",
       "effects": "Knowledge",
-      "adoption_boundary": "Use terminology with the source’s stated scope and version."
+      "adoption_boundary": "Use terminology with the source\u2019s stated scope and version."
     },
     {
       "name": "AI Incident Database",
@@ -1660,7 +1662,7 @@
       "maintainer_source": "UK AI Security Institute",
       "terms_and_status": "Crown copyright / site terms; published incident report",
       "effects": "Knowledge",
-      "adoption_boundary": "Retain the report’s configuration-specific caveats. Use it to strengthen evaluation containment, monitoring, egress, and task-design safeguards."
+      "adoption_boundary": "Retain the report\u2019s configuration-specific caveats. Use it to strengthen evaluation containment, monitoring, egress, and task-design safeguards."
     },
     {
       "name": "The next generation of MCP",
