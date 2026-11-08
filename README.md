@@ -106,6 +106,7 @@ An AI application is more than a model. Prompts, retrieval sources, vector store
 | [Semgrep AI Best Practices](https://github.com/semgrep/ai-best-practices) | Secure development | Security rules for code integrating LLM providers, MCP, assistants, and agent frameworks. |
 | [Giskard](https://github.com/Giskard-AI/giskard-oss) | Evaluation | Open-source evaluation and testing for AI and LLM systems. |
 | [DeepTeam](https://github.com/confident-ai/deepteam) | Red teaming | LLM red-team testing for engineering workflows. |
+| [whatileaked](https://github.com/selan-ai/whatileaked) | Agent transcript secret scanning | Scans local Claude Code, Codex and Cursor transcripts for credentials already sent to the model, using the gitleaks rule set. No network, zero dependencies; reports rule names and fingerprints, not secret values. |
 
 ### MCP Security
 

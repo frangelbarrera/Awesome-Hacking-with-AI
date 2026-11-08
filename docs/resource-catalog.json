@@ -772,6 +772,17 @@
       "adoption_boundary": "Scan skill packages before installation; validate findings and control any uploaded data."
     },
     {
+      "name": "whatileaked",
+      "canonical_url": "https://github.com/selan-ai/whatileaked",
+      "catalog_source": "docs/RESOURCE_CATALOG_SUPPLEMENT.md",
+      "catalog_section": "AI-System Security and Evaluation",
+      "type": "Agent-transcript secret scanner",
+      "maintainer_source": "Selan (selan-ai)",
+      "terms_and_status": "MIT license (repository LICENSE); active at 2026-11-05 review",
+      "effects": "Read / local analysis; optional `wipe` rewrites local transcript and instruction files only after the user types `wipe`",
+      "adoption_boundary": "Run on your own workstation; it makes no network requests. Treat every finding as already exposed to the model provider and rotate it; review findings before redacting."
+    },
+    {
       "name": "Vulnhalla",
       "canonical_url": "https://github.com/cyberark/Vulnhalla",
       "catalog_source": "docs/RESOURCE_CATALOG_SUPPLEMENT.md",
