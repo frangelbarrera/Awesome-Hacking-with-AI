@@ -107,6 +107,7 @@ An AI application is more than a model. Prompts, retrieval sources, vector store
 | [Giskard](https://github.com/Giskard-AI/giskard-oss) | Evaluation | Open-source evaluation and testing for AI and LLM systems. |
 | [DeepTeam](https://github.com/confident-ai/deepteam) | Red teaming | LLM red-team testing for engineering workflows. |
 | [whatileaked](https://github.com/selan-ai/whatileaked) | Agent transcript secret scanning | Scans local Claude Code, Codex and Cursor transcripts for credentials already sent to the model, using the gitleaks rule set. No network, zero dependencies; reports rule names and fingerprints, not secret values. |
+| [Ironheights](https://github.com/Frank-Masciopinto/ironheights) | Skill and extension security | Apache-2.0 CLI that statically scans OpenClaw/ClawHub and other agent skill folders before install for instruction override, hidden text, credential reads, remote-exec install steps, and persistence; reads files as data and never executes them. Experimental (pre-1.0); a clean result does not prove a skill is safe. |
 
 ### MCP Security
 
