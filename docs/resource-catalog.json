@@ -1253,7 +1253,7 @@
       "maintainer_source": "morluto / REA contributors",
       "terms_and_status": "Upstream declares [MIT](https://github.com/morluto/rea/blob/main/LICENSE); Review Required (2026-10-09)",
       "effects": "Local reads, writes, and process execution, tool-dependent",
-      "adoption_boundary": "Analyze authorized copies in operator-provided isolation; REA is not a sandbox. The stdio client receives artifact/code evidence and controls forwarding to models. Review selected tool effects and evidence retention. Native deep analysis requires existing Hopper, Ghidra, or IDA; setup requires approval before configuration or installation changes. See [setup/provider documentation](https://github.com/morluto/rea/blob/main/docs/installation.md) and [CLI/Evidence guide](https://github.com/morluto/rea/blob/main/docs/cli.md)."
+      "adoption_boundary": "Analyze authorized copies in operator-provided isolation; REA is not a sandbox. The stdio client receives artifact/code evidence and controls forwarding to models. Review selected tool effects and evidence retention. Native deep analysis requires existing Hopper, Ghidra, or IDA; setup requires approval before configuration or installation changes. See [setup/provider documentation](https://github.com/morluto/rea/blob/main/docs/getting-started/installation.md) and [CLI/Evidence guide](https://github.com/morluto/rea/blob/main/docs/getting-started/cli.md)."
     },
     {
       "name": "Cisco MCP Scanner",
