@@ -98,6 +98,7 @@ An AI application is more than a model. Prompts, retrieval sources, vector store
 | [Purple Llama](https://github.com/meta-llama/PurpleLlama) | Safety resources | Meta tools and research artifacts for trust, safety, and LLM security evaluation. |
 | [FuzzyAI](https://github.com/cyberark/FuzzyAI) | Fuzzing | Automated LLM fuzzing for resilience and jailbreak testing. |
 | [Open Prompt Injection](https://github.com/liu00222/Open-Prompt-Injection) | Benchmark | Benchmark resources for studying prompt injection and defenses. |
+| [Indirect prompt injection lab](https://github.com/Excession-Labs/prompt-injection-lab) | Experimental research lab and dataset | Code and data for testing indirect prompt injection and defenses against a mock support agent. |
 | [Agentic Radar](https://github.com/splx-ai/agentic-radar) | Agent security | CLI scanner for issues in agentic workflows. |
 | [NVIDIA SkillSpector](https://github.com/NVIDIA/SkillSpector) | Skill and extension security | Scanner for agent skills and related supply-chain, permission, prompt-injection, and data-flow risks. Treat optional model-assisted analysis as an explicit data-handling decision.[21] |
 | [Skill Scanner](https://github.com/cisco-ai-defense/skill-scanner) | Skills security | Cisco AI Defense scanner for agent-skill packages covering supply-chain and injection risks before installation; complements SkillSpector in pre-install review. |
