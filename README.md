@@ -300,6 +300,7 @@ These are not plug-and-play endorsements. Prefer read-only access, minimal scope
 | [Shodan MCP](https://github.com/w0h1v/mcp-shodan) | Attack-surface search | Queries Shodan for internet-connected devices, DNS context, and CVE information. External queries only; respect provider terms and API limits. |
 | [CVE MCP Server](https://github.com/mukul975/cve-mcp-server) | Vulnerability intelligence | Aggregates CVE, EPSS (Exploit Prediction Scoring System), and related vulnerability-intelligence APIs behind one MCP interface. Review upstream API terms before use. |
 | [npmscan](https://github.com/salemalem/npmscan-mcp-plugin) | Dependency supply chain | Read-only checks of npm packages for confirmed malware, OSV/GitHub/NVD advisories, maintainer changes, and install scripts before an agent installs them. Queries a hosted service with package names and manifests; no credentials and no writes. Treat results as advisory and keep a person in the loop for dependency changes. |
+| [mcp-launch-audit](https://github.com/zColdWater/mcp-launch-audit) | Pre-launch web & DNS security | Read-only MCP server (MIT, Streamable-HTTP and local stdio) checking authorized web deployments for client-side JS secret leaks, Mozilla Observatory HTTP headers, CSP AST issues, exposed dotfiles, and SPF/DKIM/DMARC/DNSBL posture. Performs passive GET/HEAD and public DNS lookups only; no credentials and no writes. Treat findings as advisory and verify against target configuration. |
 
 ## Research and Architecture Case Studies
 
