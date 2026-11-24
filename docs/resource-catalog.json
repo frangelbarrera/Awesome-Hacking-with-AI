@@ -4,7 +4,7 @@
     "docs/RESOURCE_CATALOG.md",
     "docs/RESOURCE_CATALOG_SUPPLEMENT.md"
   ],
-  "entry_count": 155,
+  "entry_count": 157,
   "entries": [
     {
       "name": "OWASP GenAI LLM Top 10",
@@ -1397,6 +1397,17 @@
       "terms_and_status": "Plugin MIT per repository license; hosted server is not open source; active at 2026-11-02 review",
       "effects": "External query",
       "adoption_boundary": "Read-only: sends package names, versions, and manifest or lockfile contents to npmscan.com; no credentials required. Treat findings as advisory and have a person approve any dependency removal or upgrade."
+    },
+    {
+      "name": "ScanMalware MCP",
+      "canonical_url": "https://github.com/scanmalware/mcp-server",
+      "catalog_source": "docs/RESOURCE_CATALOG_SUPPLEMENT.md",
+      "catalog_section": "Additional MCP Discovery and Review Resources",
+      "type": "URL-scan archive and phishing-analysis MCP server",
+      "maintainer_source": "ScanMalware (Triop AB)",
+      "terms_and_status": "Server code Apache-2.0 per repository license; the scanning service and archive it calls are hosted and not open source; active at 2026-11-24 review",
+      "effects": "External query; two write tools (scan submission, vote)",
+      "adoption_boundary": "No credentials required. Every call sends its arguments (the domain, URL, IP or search) to scanmalware.com, which logs them with the client IP; retention is in the [privacy policy](https://scanmalware.com/privacy). `submit_scan` makes the service visit the URL and needs a visibility choice (public scans are listed for anyone); `submit_scan_report` records a safe or malicious vote. Treat returned page titles, OCR text and scripts as untrusted data, and have a person approve submissions and votes."
     },
     {
       "name": "MCP Registry",
